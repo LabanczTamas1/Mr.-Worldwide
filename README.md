@@ -83,21 +83,21 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ### Követelménylista:
 1. Funkcionális Követelmények\
-1.1 Felhasználói kezelés
+1.1 Felhasználói kezelés\
 - Regisztráció és Bejelentkezés: A felhasználók regisztrálhatnak e-mail cím vagy közösségi média fiók segítségével.
 - Felhasználói Profil: Felhasználók létrehozhatnak és szerkezhetik a saját profiljukat beleértve a kapcsolati információikat és profilképüket.
-1.2 Tartalom kezelés
+1.2 Tartalom kezelés\
 - Blogbejegyzés Készítése: Felhasználók új blogokat írhatnak, szerkeszthetnek és közzéthetnek.
 - Tartalom Formázás: Bejegyzések formázása a webolalon.
 - Kategorizálás: Bejegyzések kategorizálásának lehetősége.
 - Kép feltöltés: A bejegyzésekhez képeket tölthetnek fel.
-1.2 Keresés és Navigáció:
+1.2 Keresés és Navigáció\
 - Keresőfunkció: Felhasználók keresési lehetősége bejegyzések eléréséhez.
 -Navigáció: Weboldalon könnyű navigáció kategóriák alapján.
-1.4 Interakció és Közösségi Funkciók
+1.4 Interakció és Közösségi Funkciók\
 - Kommentelés: Felhasználók kommentelhetnek blogbejegyzések alatt.
 - Like: Bejegyzések lájkolhatók
-1.6 Adminisztráció
+1.6 Adminisztráció\
 - Admin: Adminisztrátorok hozzáférhetnek a felhasználói fiókok kezelésére és a tartalom moderálására.
 ## Funkcionális specifikáció:
 ## Rendszerterv:
