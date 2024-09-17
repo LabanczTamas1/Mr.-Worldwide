@@ -4,10 +4,9 @@
 A MR.WorldWide platform célja, hogy összekapcsolja a bloggereket és az olvasókat, lehetővé téve számukra, hogy megosszák tapasztalataikat és felfedezéseiket különböző helyekről amiket már meglátogadtak.
 A platform a felhasználói élményre specifikálódik, hogy minél könnyedébben tudjanak az olvasók elérni különböző blogokat.
 ### Vágyálom rendszer:
-Vállalkozásunk bővítése érdekében szeretnénk üzletünknek honlapot és egyúttal az adminisztrációnkat támogató rendszert. Célunk, hogy az ügyfeleink naprakész információkat kaphassanak az elérhető úticélokról, látványosságokról. Szeretnénk nyilvántartásunk online kezelését is megoldani, hogy az ügyvezető távolról is láthassa az aktuális információkat.
+A projekt célja egy olyan rendszer, amely az utazni vágyó felhasználók számára kényelmes, egyszerű és hatékony böngészését biztosítja. Célunk, hogy a felhasználó naprakész információkat kaphasson az elérhető úticélokról, látványosságokról. A web oldalt látogatók csak megtekinteni képesek a különböző posztokat, majd regisztrációt követően a rendszer lehetővé teszi a felhasználók számára egyes posztokhoz való hozzászólást és azok kedvelését. A rendszernek van egy admin felülete is, ahol az admin képes új posztokat létrehozni, azokat módosítani vagy éppen törölni.
 
-A web oldal könnyen üzemeltethető legyen. Elvárt a platformfüggetlenség, pl. mysql+php. Nem elfogadható csak Microsoft Windows 
-operációs rendszeren üzemeltethető rendszerre vonatkozó javaslat. Az online megjenés lehetőleg mobil telefonon, tableten is működjön, reszponzív felülettel.
+Kifinomult, letisztult és elegáns felülettel rendelkezik a program, hogy felkeltse a felhasználók figyelmét. Ezenkívül reszponzív felülettel rendelkezik, mely lehetővé teszi, hogy az online megjelenés mobil telefonon vagy akár tableten is működjön.
 ### Jelenlegi üzleti folyamatok:
 3.Jelenlegi üzleti folyamatok a MR.WorldWide platformon\
 3.1. Blogbejegyzések nyilvántartása\
@@ -61,6 +60,27 @@ operációs rendszeren üzemeltethető rendszerre vonatkozó javaslat. Az online
 - A rendszer regisztrálja a lájkot, és frissíti a lájkok számát a bejegyzésnél
 - Visszajelzés a felhasználónak, hogy a lájk sikeresen rögzítésre került
 ### A rendszerre vonatkozó szabályok:
+MIT License
+
+Copyright (c) 2024 Mr.WorldWide
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ### Követelménylista:
 ## Funkcionális specifikáció:
 ## Rendszerterv:
