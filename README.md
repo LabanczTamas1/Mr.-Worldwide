@@ -5,9 +5,9 @@
     
     A platform a felhasználói élményre specifikálódik, hogy minél könnyedébben tudjanak az olvasók elérni különböző blogokat.
 ### Vágyálom rendszer:
-    Vállalkozásunk bővítése érdekében szeretnénk üzletünknek honlapot és egyúttal az adminisztrációnkat támogató rendszert. Célunk, hogy az ügyfeleink naprakész információkat kaphassanak az elérhető úticélokról, látványosságokról. Szeretnénk nyilvántartásunk online kezelését is megoldani, hogy az ügyvezető távolról is láthassa az aktuális információkat.
+<p>Vállalkozásunk bővítése érdekében szeretnénk üzletünknek honlapot és egyúttal az adminisztrációnkat támogató rendszert. Célunk, hogy az ügyfeleink naprakész információkat kaphassanak az elérhető úticélokról, látványosságokról. Szeretnénk nyilvántartásunk online kezelését is megoldani, hogy az ügyvezető távolról is láthassa az aktuális információkat.</p>
 
-    A web oldal könnyen üzemeltethető legyen. Elvárt a platformfüggetlenség, pl. mysql+php. Nem elfogadható csak Microsoft Windows operációs rendszeren üzemeltethető rendszerre vonatkozó javaslat. Az online megjenés lehetőleg mobil telefonon, tableten is működjön, reszponzív felülettel.
+<p>A web oldal könnyen üzemeltethető legyen. Elvárt a platformfüggetlenség, pl. mysql+php. Nem elfogadható csak Microsoft Windows operációs rendszeren üzemeltethető rendszerre vonatkozó javaslat. Az online megjenés lehetőleg mobil telefonon, tableten is működjön, reszponzív felülettel.</p>
 ### Jelenlegi üzleti folyamatok:
 ### Igényelt üzleti folyamatok:
 4. Igényelt üzleti folyamatok a MR.WorldWide platformon
