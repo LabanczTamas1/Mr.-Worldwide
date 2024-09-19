@@ -125,7 +125,7 @@ SOFTWARE.
 
 ## Rendszerterv:
 
-1. Architektúra áttekintés:
+1.Architektúra áttekintés:
 A Mr.WorldWide blogplatform egy webalapú alkalmazás, amely a felhasználók számára blogbejegyzések létrehozását, olvasását, kommentelését és interakcióját teszi lehetővé.
 
 1.1. Alkalmazásarchitektúra:
@@ -147,7 +147,7 @@ Adminisztrációs felület
 Adatbázis:
 Tervezés alatt.
 
-2. Adatmodell:
+2.Adatmodell:
 
 2.1. Felhasználói táblák:
 Tervezés alatt.
@@ -155,7 +155,7 @@ Tervezés alatt.
 2.2. Tartalomkezelési táblák:
 Tervezés alatt.
 
-3. Fő funkciók:
+3.Fő funkciók:
 
 3.1. Felhasználói funkciók:
 Regisztráció: A felhasználók kitöltik a regisztrációs űrlapot, a rendszer ellenőrzi az adatokat, majd elmenti azokat az adatbázisba. 
