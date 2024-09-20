@@ -278,7 +278,7 @@ VENDÉG:
 - Platformok:
 Az alkalmazás egy web alapú platformra készül, amely elérhető lesz asztali böngészőkben és hordozható eszközökön (okostelefonok, táblagépek).
 
--Fejlesztői eszközök
+- Fejlesztői eszközök
 Visual Studio Code: Kódszerkesztő és integrált fejlesztőkörnyezet (IDE).
 DbForge: Adatbázis kezelési és tervezési eszköz.
 ### Absztakt domain modell:
@@ -329,9 +329,6 @@ Az adatbázisban a következő táblák találhatók:
 -A felhasználói jelszavak bcrypt alapú titkosítással vannak tárolva az adatbázisban.- Platformok:
 Az alkalmazás egy web alapú platformra készül, amely elérhető lesz asztali böngészőkben és hordozható eszközökön (okostelefonok, táblagépek).
 
--Fejlesztői eszközök
-Visual Studio Code: Kódszerkesztő és integrált fejlesztőkörnyezet (IDE).
-DbForge: Adatbázis kezelési és tervezési eszköz.
 ### Adatbázis terv:
 ![adatbázis terv](files/img/databaseDiagram.png)
 ### Implementációs terv:
