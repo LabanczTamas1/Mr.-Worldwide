@@ -159,20 +159,19 @@ A megrendelő keresett már meglévő alkalmazások és webhelyek közül, amely
 ### Képernyő tervek:
 ### Forgatókönyv:
 ## Rendszerterv:
-### A rendszer célja
-### Projektterv
-### Üzleti folyamatok modellje
-### Követelmények
-### Követelmények
-### Funkcionális terv
-### Fizikai környezet
-### Absztakt domain modell
-### Architekturális terv
-### Adatbázis terv
-### Implementációs terv
-### Tesztterv
-### telepítési terv
-### Karbantartási terv
+### A rendszer célja:
+### Projektterv:
+### Üzleti folyamatok modellje:
+### Követelmények:
+### Funkcionális terv:
+### Fizikai környezet:
+### Absztakt domain modell:
+### Architekturális terv:
+### Adatbázis terv:
+### Implementációs terv:
+### Tesztterv:
+### Telepítési terv:
+### Karbantartási terv:
 
 
 
