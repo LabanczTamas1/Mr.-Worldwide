@@ -1,5 +1,9 @@
 # Mr. Wordlwide
 ## Követelmény specifikáció:
+### Áttekintés:
+Az alkalmazás célja a kirándulni, utazni vágyó emberek segítése egy könnyen használható, egyszerűen átlátható weboldal segítségével. Ezenkívül szeretnénk programunkkal összekötni a kirándulókat bárhol is legyenek a világban és hasznos információkhoz, tapasztalatokhoz juttatni őket.
+
+Az alkalmazás rendelkezik Web felülettel, ahol elérhető az összes felhasználói funkció. Az úticélok, túrista látványosságok kontinens, azon belül országok és végül városok szerint vannak osztályozva. A felhasználónak lehetősége van a saját véleményét megosztani másokkal és elolvasni mások mit gondolnak az adott helyről.
 ### Jelenlegi helyzet:
 A MR.WorldWide platform célja, hogy összekapcsolja a bloggereket és az olvasókat, lehetővé téve számukra, hogy megosszák tapasztalataikat és felfedezéseiket különböző helyekről amiket már meglátogadtak.
 A platform a felhasználói élményre specifikálódik, hogy minél könnyedébben tudjanak az olvasók elérni különböző blogokat.
@@ -76,6 +80,8 @@ Kifinomult, letisztult és elegáns felülettel rendelkezik a program, hogy felk
 - Visszajelzés a felhasználónak, hogy a lájk sikeresen rögzítésre került
 
 ### A rendszerre vonatkozó szabályok:
+Az alkalmazás tárol bizonyos adatokat a felhasználóról, (felhasználónév, email, jelszó) ezért a programra és a felhasználóra az Európai Únió [General Data Protection Regulation (GDPR)](https://gdprinfo.eu/hu) rendeletében foglalt jogszabályok érvényesek.
+
 MIT License
 
 Copyright (c) 2024 Mr.WorldWide
