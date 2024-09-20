@@ -153,14 +153,73 @@ A megrendelő keresett már meglévő alkalmazások és webhelyek közül, amely
 | Felület     | F9  | Kereső                    | 1.0 | A felhasználónak lehetősége van különböző filterek alapján keresni a posztok között.                                                                                                                                                                                                 |
 | Jogosultság | F10 | Admin felület             | 1.0 | Felület az admin fiókkal rendelkező felhasználó számára. Tartalmaz egy felületet az új posztok feltöltéséhez.                                                                                                                                                                        |
 ### Jelenlegi üzleti folyamatok modellje:
+A jelenlegi üzleti folyamatok az utazási és turisztikai ágazatban hagyományosan manuális és széttöredezett módszereket alkalmaznak az információk elérésére és megosztására. A turisták többnyire különböző forrásokat használnak (útikönyvek, blogok, weboldalak) az utazási célpontjaik kiválasztásához, és az értékelések, valamint a helyi tapasztalatok gyűjtése gyakran nehézkes és nem megbízható.
+
+**Jelenlegi problémák:**
+- A felhasználók nehezen találnak megbízható és naprakész információkat az úticélokról egy központi helyen.
+- A turisták különböző forrásokat böngésznek át, hogy összehasonlítsák a látványosságokat és az élményeket, ami időigényes.
+- A vélemények és értékelések gyakran szét vannak szórva több platformon, így a turisták számára nehéz megtalálni a releváns információkat.
+- Az interakció a turisták között nem központi vagy egyszerű, a tapasztalatok megosztása korlátozott.
+- Az utazók személyes tapasztalataik megosztása kevésbé interaktív vagy struktúrált formában történik, blogokon vagy közösségi médiában.
+- A turisztikai ipar nem használja ki teljes mértékben a digitális technológiákat a felhasználók bevonására és az információk naprakészen tartására.
+
+---
 ### Igényelt üzleti folyamatok modellje:
+Az igényelt modell célja, hogy egyszerűsítse és központosítsa a turisták számára az információk elérését és megosztását egy felhasználóbarát, interaktív platformon keresztül. Az új rendszer lehetővé teszi a felhasználók számára, hogy gyorsan és hatékonyan hozzáférjenek a turisztikai látványosságokhoz kapcsolódó információkhoz, valamint közösségi élményt biztosít a vélemények és értékelések megosztásához.
+
+**Fejlesztendő megoldások:**
+- Egy központi, jól strukturált weboldal, ahol a felhasználók kontinens, ország és város szerint kereshetnek látványosságokat.
+- A felhasználók számára lehetőség nyílik vélemények megosztására és mások véleményeinek olvasására közvetlenül az oldalon.
+- Valós idejű értékelési és visszajelzési funkciók biztosítása, hogy az utazók friss és releváns információkat kapjanak.
+- A felhasználók közötti interakció növelése a hozzászólási és értékelési funkciók fejlesztésével.
+- Az úticélokhoz kapcsolódó ajánlások és szűrők beépítése, hogy a felhasználók személyre szabott utazási élményt kapjanak.
+- A felhasználók számára létrehozható profilok, ahol összegyűjthetik az általuk meglátogatott helyeket, és megoszthatják tapasztalataikat.
+
+**Előnyök:**
+- Központosított információforrás, amely leegyszerűsíti az utazás tervezését és az értékelésekhez való hozzáférést.
+- Gyors és könnyen használható rendszer, amely csökkenti az információk keresésével töltött időt.
+- A közösségi élmények megosztása növeli a felhasználók elkötelezettségét és a platform interaktivitását.
+  
+---
 ### Használati esetek:
+**Felhasználói szerepkörök:**
+
+1. **REGISZTRÁLT FELHASZNÁLÓ:**
+   - Kereshet úticélokat, turisztikai látványosságokat kontinensek, országok és városok szerint.
+   - Véleményt írhat és olvashat más felhasználók tapasztalatairól.
+   - Hozzászólhat és értékelheti a látványosságokat.
+   - Saját utazási élményeit megoszthatja.
+
+2. **LÁTOGATÓ (regisztráció nélkül):**
+   - Böngészhet az úticélok és látványosságok között, de nem írhat véleményt vagy értékelést.
+   - Megtekintheti más felhasználók véleményeit és értékeléseit.
+
+3. **ADMINISZTRÁTOR:**
+   - Teljes hozzáféréssel rendelkezik a rendszerhez, beleértve a felhasználói adatok kezelését és a moderációs funkciókat.
+   - Ellenőrzi a felhasználók által megosztott tartalmakat, és moderálja a véleményeket, hogy biztosítsa a platform biztonságát és hitelességét.
+   - Új látványosságokat és úticélokat adhat hozzá az adatbázishoz.
+   - Képes felhasználói fiókokat létrehozni vagy törölni, valamint globális üzeneteket küldeni a felhasználók számára.
+
+**Használati esetek példái:**
+
+1. **Úticél keresése:**
+   - A felhasználó bejelentkezik, keres egy adott országot vagy várost, és megtekinti a látványosságok listáját.
+   - Kiválaszt egy helyszínt, és elolvassa mások értékeléseit és véleményeit.
+
+2. **Vélemény írása:**
+   - Egy felhasználó meglátogat egy látványosságot, majd értékelést és tapasztalatot ír az oldalra.
+   - Más felhasználók hozzászólhatnak a véleményhez, és értékelhetik azt (pl. "hasznos" vagy "nem hasznos").
+
+3. **Adminisztrátor beavatkozása:**
+   - Az adminisztrátor egy problémás tartalmat észlel a vélemények között, amely nem felel meg az irányelveknek, és eltávolítja azt a platformról.
+   - Új úticélokat ad hozzá, amelyekről a felhasználók véleményt alkothatnak.
+
+---
 ### Megfeleltetés:
 ### Képernyő tervek:
 ### Forgatókönyv:
 ## Rendszerterv:
 ### A rendszer célja:
-### Projektterv:
 ### Üzleti folyamatok modellje:
 ### Követelmények:
 ### Funkcionális terv:
