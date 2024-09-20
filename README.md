@@ -234,12 +234,115 @@ Az igényelt modell célja, hogy egyszerűsítse és központosítsa a turisták
 ### Forgatókönyv:
 ## Rendszerterv:
 ### A rendszer célja:
+### Projektterv:
 ### Üzleti folyamatok modellje:
 ### Követelmények:
 ### Funkcionális terv:
+**Rendszerszereplők:**
+- Admin
+- Felhasználó
+- Vendég
+
+**Rendszerhasználati esetek és lefutásaik:**
+
+ADMIN:
+- Beléphet bármilyen szereplőként teljes hozzáférése van a rendszerhez
+- A felhasználói adatokat látják
+- Új poszt hozzáadása
+- Meglévő posztok módosítása
+- Meglévő posztok törlése
+- Hozzászólás hozzáadása poszthoz
+- Poszt ajánlása vagy nem ajánlása
+- Keresés a posztok között filterek segítségével
+
+FELHASZNÁLÓ:
+- A felhasználói adatokat látják
+- Új poszt hozzáadása
+- Meglévő posztok módosítása
+- Meglévő posztok törlése
+- Hozzászólás hozzáadása poszthoz
+- Poszt ajánlása vagy nem ajánlása
+- Keresés a posztok között filterek segítségével
+
+VENDÉG:
+- A felhasználói adatokat látják
+- Keresés a posztok között filterek segítségével
+
+**Menü-hierarchiák:**
+
+- BEJELENTKEZÉS
+    - Bejelentkezés
+    - Regisztráció
+
+- NAVIGÁCIÓS MENÜ
+    - Új poszt (Felhasználó, Admin)
+    - Poszt módosítása (Felhasználó, Admin)
+    - Poszt törlése (Felhasználó, Admin)
+    - Keresés
+    - Fiók
+    - Bejelentkezés
+    - Regisztráció
+    - Kijelentkezés
+
+- FIÓK
+    - Felhasználónév módosítása
+    - Jelszó módosítása
+    - Fiók törlése
 ### Fizikai környezet:
+- Platformok:
+Az alkalmazás egy web alapú platformra készül, amely elérhető lesz asztali böngészőkben és hordozható eszközökön (okostelefonok, táblagépek).
+
+- Fejlesztői eszközök
+Visual Studio Code: Kódszerkesztő és integrált fejlesztőkörnyezet (IDE).
+DbForge: Adatbázis kezelési és tervezési eszköz.
 ### Absztakt domain modell:
+Felhasználók: A blog platform különböző felhasználói szerepekkel rendelkezik:
+
+- Adminisztrátorok: Adminisztrációs jogkörökkel rendelkeznek a blogok moderálását.
+- Felhasználók: Olyan regisztrált felhasználók, akik jogosultak blogbejegyzéseket közzétenni és szerkeszteni.
+- Vendég: A blog platform látogatói, akik megtekinthetik a bejegyzéseket.
+
+- Blog bejegyzés:
+Egy bejegyzés tartalmazza a címet, tartalmat, szerző nevét, és metaadatokat.
+
+- Kommentek:
+A felhasználók kommenteket fűzhetnek a bejegyzésekhez.
+
+- Felhasználói profilok:
+A felhasználók saját profiloldallal rendelkeznek, ahol megjelenik a felhasználói nevük, a közzétett bejegyzéseik listája.
 ### Architekturális terv:
+Backend (Saját MVC keretrendszer):
+A backend az egyedi MVC (Model-View-Controller) architektúra alapján épül fel, amely tiszta elkülönítést biztosít a logika, az adatkezelés és a megjelenítés között. 
+
+- Model (Adatkezelés):
+A modellek az adatbázis műveletekért felelősek, és kapcsolatot tartanak az adatbázissal. Az adatbázis kezelése a dbForge segítségével történik, amely egy fejlett eszköz az adatbázis tervezéséhez, lekérdezéséhez és optimalizálásához.
+A modellek kezelik a következő adatokat:
+
+- Blog bejegyzések: Tárolják a bejegyzés címét, tartalmát és metaadatait (címkék, kategóriák).
+Felhasználók: Regisztrált felhasználók adatai, beleértve a felhasználónevet, jelszót, email címet és profiladatokat.
+- Kommentek: A felhasználói hozzászólások, amelyek kapcsolódnak a blog bejegyzésekhez.
+- Controller (Üzleti logika):
+A kontroller réteg felelős a felhasználói kérések fogadásáért és az ezekre adott válaszok feldolgozásáért.
+
+- Blogkezelés: A felhasználók új blogbejegyzéseket hozhatnak létre, meglévőket szerkeszthetnek vagy törölhetnek. A bejegyzések adatainak kezelését a kontroller végzi, és meghívja a megfelelő modellt az adatbázis műveletekhez.
+- Felhasználói hitelesítés: A bejelentkezési és regisztrációs folyamatok kezelése, jelszó ellenőrzés, valamint session-kezelés.
+- Kommentkezelés: A felhasználók hozzászólásainak létrehozása, szerkesztése és moderálása. Minden hozzászólás a megfelelő blog bejegyzéshez kapcsolódik, és a kontroller kezeli a validációt, mielőtt az adatbázisba kerülne.
+- View (Megjelenítés):
+A nézetek (View-k) HTML alapú megjelenítést biztosítanak.
+
+- A nézetek felelősek a blogbejegyzések, kommentek és felhasználói profilok megjelenítéséért.
+- A felhasználói interakciókat (pl. új bejegyzés írása, komment hozzáadása) közvetlenül a böngészőn keresztül, szerveroldali feldolgozással kezeljük. A frissítések a nézeteken keresztül történnek újra betöltéssel vagy form-kezdeményezett POST kérésekkel.
+- Adatbázis (dbForge és MySQL):
+- Az adatbázis-kezelést MySQL végzi, amely a blogbejegyzéseket, felhasználói adatokat, kommenteket és egyéb kapcsolódó adatokat tárol.
+- dbForge-ot használunk az adatbázis tervezésére, karbantartására és a lekérdezések optimalizálására. A dbForge biztosítja az adatbázis struktúrák, relációk és indexelések vizuális kezelését, ami megkönnyíti az adatbázis fejlődésének nyomon követését és hatékony működését.
+Az adatbázisban a következő táblák találhatók:
+- Users (Felhasználók): Felhasználói profilok, hitelesítési adatok (pl. felhasználónév, jelszó, email).
+- Posts (Bejegyzések): Blogbejegyzések adatai (pl. cím, tartalom, szerző, dátum).
+- Comments (Kommentek): Hozzászólások tárolása, amelyek egy adott blogbejegyzéshez kapcsolódnak.
+- Biztonság:
+- A felhasználói jelszavak bcrypt alapú titkosítással vannak tárolva az adatbázisban.
+
+
 ### Adatbázis terv:
 ![adatbázis terv](files/img/databaseDiagram.png)
 ### Implementációs terv:
