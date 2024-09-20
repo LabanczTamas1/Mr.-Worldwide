@@ -326,8 +326,8 @@ Az adatbázisban a következő táblák találhatók:
 - Posts (Bejegyzések): Blogbejegyzések adatai (pl. cím, tartalom, szerző, dátum).
 - Comments (Kommentek): Hozzászólások tárolása, amelyek egy adott blogbejegyzéshez kapcsolódnak.
 - Biztonság:
--A felhasználói jelszavak bcrypt alapú titkosítással vannak tárolva az adatbázisban.- Platformok:
-Az alkalmazás egy web alapú platformra készül, amely elérhető lesz asztali böngészőkben és hordozható eszközökön (okostelefonok, táblagépek).
+- A felhasználói jelszavak bcrypt alapú titkosítással vannak tárolva az adatbázisban.
+
 
 ### Adatbázis terv:
 ![adatbázis terv](files/img/databaseDiagram.png)
