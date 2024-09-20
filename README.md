@@ -220,9 +220,60 @@ Az igényelt modell célja, hogy egyszerűsítse és központosítsa a turisták
 ### Forgatókönyv:
 ## Rendszerterv:
 ### A rendszer célja:
+### Projektterv:
 ### Üzleti folyamatok modellje:
 ### Követelmények:
 ### Funkcionális terv:
+**Rendszerszereplők:**
+- Admin
+- Felhasználó
+- Vendég
+
+**Rendszerhasználati esetek és lefutásaik:**
+
+ADMIN:
+- Beléphet bármilyen szereplőként teljes hozzáférése van a rendszerhez
+- A felhasználói adatokat látják
+- Új poszt hozzáadása
+- Meglévő posztok módosítása
+- Meglévő posztok törlése
+- Hozzászólás hozzáadása poszthoz
+- Poszt ajánlása vagy nem ajánlása
+- Keresés a posztok között filterek segítségével
+
+FELHASZNÁLÓ:
+- A felhasználói adatokat látják
+- Új poszt hozzáadása
+- Meglévő posztok módosítása
+- Meglévő posztok törlése
+- Hozzászólás hozzáadása poszthoz
+- Poszt ajánlása vagy nem ajánlása
+- Keresés a posztok között filterek segítségével
+
+VENDÉG:
+- A felhasználói adatokat látják
+- Keresés a posztok között filterek segítségével
+
+**Menü-hierarchiák:**
+
+- BEJELENTKEZÉS
+    - Bejelentkezés
+    - Regisztráció
+
+- NAVIGÁCIÓS MENÜ
+    - Új poszt (Felhasználó, Admin)
+    - Poszt módosítása (Felhasználó, Admin)
+    - Poszt törlése (Felhasználó, Admin)
+    - Keresés
+    - Fiók
+    - Bejelentkezés
+    - Regisztráció
+    - Kijelentkezés
+
+- FIÓK
+    - Felhasználónév módosítása
+    - Jelszó módosítása
+    - Fiók törlése
 ### Fizikai környezet:
 ### Absztakt domain modell:
 ### Architekturális terv:
