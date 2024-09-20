@@ -168,6 +168,7 @@ A megrendelő keresett már meglévő alkalmazások és webhelyek közül, amely
 ### Absztakt domain modell:
 ### Architekturális terv:
 ### Adatbázis terv:
+![adatbázis terv](files/img/databaseDiagram.png)
 ### Implementációs terv:
 ### Tesztterv:
 ### Telepítési terv:
