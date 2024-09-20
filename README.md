@@ -159,55 +159,20 @@ A megrendelő keresett már meglévő alkalmazások és webhelyek közül, amely
 ### Képernyő tervek:
 ### Forgatókönyv:
 ## Rendszerterv:
-
-1.Architektúra áttekintés:
-A Mr.WorldWide blogplatform egy webalapú alkalmazás, amely a felhasználók számára blogbejegyzések létrehozását, olvasását, kommentelését és interakcióját teszi lehetővé.
-
-1.1. Alkalmazásarchitektúra:
-Kliens (Front-end): A felhasználói felület HTML5, CSS és JavaScript technológiákra épül. A reszponzív megjelenést a Bootstrap CSS framework biztosítja, amely lehetővé teszi az oldal mobil nézetben történő használatát.
-Back-end: A szerver oldali működés PHP alapú, amely a blogbejegyzéseket, felhasználói interakciókat és adminisztratív funkciókat kezeli. 
-Adatbázis: A blogbejegyzések, felhasználói fiókok és interakciók adatainak tárolására (pl. MySQL vagy DbForge) szolgál.
-
-1.2. Fő komponensek:
-Front-end:
-Felhasználói bejelentkezési és regisztrációs felület
-Blogbejegyzések olvasása, kommentelés, like-olás
-Kereső- és szűrőfunkciók
-Reszponzív design
-Back-end:
-Felhasználói hitelesítés és jogosultságkezelés (regisztráció, bejelentkezés, admin jogosultság)
-Blogbejegyzések kezelése (létrehozás, szerkesztés, törlés)
-Interakciók kezelése (kommentek és like-ok rögzítése)
-Adminisztrációs felület
-Adatbázis:
-Tervezés alatt.
-
-2.Adatmodell:
-
-2.1. Felhasználói táblák:
-Tervezés alatt.
-
-2.2. Tartalomkezelési táblák:
-Tervezés alatt.
-
-3.Fő funkciók:
-
-3.1. Felhasználói funkciók:
-Regisztráció: A felhasználók kitöltik a regisztrációs űrlapot, a rendszer ellenőrzi az adatokat, majd elmenti azokat az adatbázisba. 
-Bejelentkezés: A felhasználók bejelentkeznek a felhasználónév/jelszó kombinációval, amelyet a rendszer összevet az adatbázissal.
-Blogok megtekintése: A felhasználók böngészhetik a blogokat, olvashatják a bejegyzéseket és interakcióba léphetnek azokkal.
-Keresés és szűrés: A felhasználók kereshetnek blogokat kulcsszó vagy kategória alapján.
-
-3.2. Adminisztrációs funkciók:
-Blogkezelés: Az admin felület lehetővé teszi a blogbejegyzések kezelését (új bejegyzés létrehozása, szerkesztése, törlése).
-Moderálás: Az admin moderálhatja a felhasználói interakciókat, például törölhet kommenteket és posztokat.
-
-4. Felhasználói hitelesítés és jogosultságkezelés:
-Jelszavak titkosítása 
+### A rendszer célja
+### Projektterv
+### Üzleti folyamatok modellje
+### Követelmények
+### Követelmények
+### Funkcionális terv
+### Fizikai környezet
+### Absztakt domain modell
+### Architekturális terv
+### Adatbázis terv
+### Implementációs terv
+### Tesztterv
+### telepítési terv
+### Karbantartási terv
 
 
-5. Technológiai Stack:
-Front-end: HTML5, CSS, JavaScript és JQuery
-Back-end: PHP (MVC)
-Adatbázis: DbForge vagy MySQL
 
