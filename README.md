@@ -27,11 +27,11 @@ Kifinomult, letisztult és elegáns felülettel rendelkezik a program, hogy felk
 - Az adminisztrációs felületen keresztül eltávolítja a tartalmat, ami manuálisan is rögzítésre kerül egy nyilvántartásban.
 
 3.2. Blogmegjelenítés és olvasói interakciók
-- Az olvasók regisztráció vagy bejelentkezés után tudnak hozzászólni a blogbejegyzésekhez illetve likeolni.
+- Az olvasók regisztráció vagy bejelentkezés után tudnak hozzászólni a blogbejegyzésekhez illetve ajánlani.
 - A kommenteket közvetlenül a blogbejegyzés alatt lehet megírni, amit a rendszer azonnal rögzít.
 
 ### Igényelt üzleti folyamatok:
-4.‎‎‎Igényelt üzleti folyamatok a MR.WorldWide platformon
+4.Igényelt üzleti folyamatok a MR.WorldWide platformon
 
 4.1 Online megjelenés
 
@@ -72,10 +72,10 @@ Kifinomult, letisztult és elegáns felülettel rendelkezik a program, hogy felk
 - Kommentmező kitöltése
 - Komment elküldése
 
-4.1.7 Blog like-olása
+4.1.7 Blog Ajánlása
 - Regisztrált felhasználó bejelentkezése
 - Kiválasztott blogbejegyzés megnyitása
-- Like gomb megnyomása
+- Ajánlás gomb megnyomása
 - A rendszer regisztrálja a lájkot, és frissíti a lájkok számát a bejegyzésnél
 - Visszajelzés a felhasználónak, hogy a lájk sikeresen rögzítésre került
 
@@ -122,7 +122,7 @@ SOFTWARE.
 
 1.4 Interakció és Közösségi Funkciók
 - Kommentelés: Felhasználók kommentelhetnek blogbejegyzések alatt.
-- Like: Bejegyzések lájkolhatók
+- Ajánlás: Bejegyzések ajánlása
 
 1.6 Adminisztráció
 - Admin: Adminisztrátorok hozzáférhetnek a felhasználói fiókok kezelésére és a tartalom moderálására.
@@ -234,9 +234,82 @@ Az igényelt modell célja, hogy egyszerűsítse és központosítsa a turisták
 ### Forgatókönyv:
 ## Rendszerterv:
 ### A rendszer célja:
+A rendszer célja, hogy a kirándulni és utazni vágyó felhasználók számára egy könnyen használható, átlátható weboldalt biztosítson, amely segít összekötni a turistákat világszerte, és hasznos információkat, tapasztalatokat nyújtson számukra. Az alkalmazás lehetőséget ad arra, hogy a felhasználók úticélokat, túrista látványosságokat fedezzenek fel, amelyek kontinensek, országok, majd városok szerint vannak kategorizálva. A felhasználók megoszthatják saját véleményüket és tapasztalataikat az adott helyszínekről, valamint elolvashatják mások visszajelzéseit is. A rendszer kizárólag webes felületen érhető el, minimalista felhasználói felülettel, amely biztosítja a könnyű navigációt és a gyors információelérést. Célunk, hogy a felhasználók számára egy közösségi platformot teremtsünk, ahol megoszthatják élményeiket és javaslataikat más kirándulókkal.
+
+---
 ### Projektterv:
+- **Scrum master:** Dobrosi Gergő  
+  Feladata a fejlesztési folyamatok koordinálása, a csapat támogatása a munkafolyamatok gördülékeny működésében.
+
+- **Product owner:** Székely Zsolt  
+  Felelős az alkalmazás céljainak meghatározásáért és az ügyféligények képviseletéért. Prioritásokat állít fel a fejlesztési backlog alapján.
+
+- **Projektmunkások és felelősségek:**
+
+  - **Frontend fejlesztők:**  
+    Feladatuk az alkalmazás webes felületének kialakítása, a felhasználói élmény megtervezése és megvalósítása.
+  
+  - **Backend fejlesztők:**  
+    Feladatuk az adatbázis felépítése, az adatszerkezetek megtervezése és a Web Service megvalósítása, amely az alkalmazás adatait biztosítja.
+
+  - **UI/UX tervezők:**  
+    Felelősek az egyszerű, intuitív felhasználói felület megtervezéséért, amely segíti a felhasználókat az alkalmazás használatában.
+
+  - **Tesztelők:**  
+    Feladatuk az alkalmazás funkcióinak és teljesítményének ellenőrzése, hibakeresés és visszajelzések küldése a fejlesztők számára.
+
+**Ütemterv:**
+
+| Funkció / Story              | Feladat / Task                     | Prioritás | Becslés (óra) | Aktuális becslés | Eltelt idő (óra) | Hátralévő idő (óra) |
+|------------------------------|------------------------------------|-----------|---------------|------------------|------------------|---------------------|
+| Követelmény specifikáció      | A rendszer igényeinek felmérése    | 0         | 16            | 16               | 16               | 0                   |
+| Funkcionális specifikáció     | Az alapvető funkciók meghatározása | 0         | 12            | 12               | 8                | 4                   |
+| Rendszerterv                  | Műszaki dokumentáció elkészítése   | 0         | 20            | 20               | 12               | 8                   |
+| Adattárolás                   | Adatmodell megtervezése            | 0         | 8             | 8                | 4                | 4                   |
+| Adatbázis megvalósítása       | Szerveren futó adatbázis létrehozása| 1         | 10            | 10               | 5                | 5                   |
+| Frontend fejlesztés           | Felhasználói felület kialakítása   | 2         | 20            | 20               | 10               | 10                  |
+| Véleményezés funkció          | Vélemények megosztásának megoldása | 2         | 10            | 10               | 5                | 5                   |
+---
+
+**Mérföldkövek:**
+
+1. **Követelmény specifikáció bemutatása** – Sikeresen befejeződött, minden kulcsfontosságú igény meghatározásra került.
+2. **Adatmodell bemutatása** – Az adatstruktúrák elkészültek, és jóváhagyásra kerültek a backend fejlesztés megkezdése előtt.
+3. **Első felhasználói teszt** – A felhasználói felület alapverziója készen áll a tesztelésre.
+4. **Backend integráció tesztelése** – A Web Service és az adatbázis összekapcsolása megtörtént.
+
+Az ütemterv folyamatosan frissül a fejlesztés előrehaladtával, és a Scrum módszertan alapján történik a feladatok kiértékelése és újraütemezése.
+
+---
 ### Üzleti folyamatok modellje:
+<img src="files/img/uzleti_folyamatok_modellje.png" width="800" height="800">
+
 ### Követelmények:
+**Funkcionális követelmények:**
+
+- A felhasználóknak lehetőséget kell biztosítani arra, hogy regisztráljanak, bejelentkezzenek és profiljukat kezeljék.
+- Az úticélok és turisztikai látványosságok kategorizálása kontinensek, országok és városok szerint.
+- A felhasználók véleményeket oszthassanak meg az általuk látogatott helyekről, és más felhasználók véleményeit olvashassák.
+- Lehetőség úticélok keresésére és szűrésére adott kritériumok alapján (pl. kontinens, ország, város).
+- A felhasználók közötti interakciók támogatása (pl. más felhasználók értékelései, hozzászólások).
+- Webes felület biztosítása, amely könnyen kezelhető és intuitív navigációt nyújt.
+- Felhasználói visszajelzések kezelése (pozitív vagy negatív értékelés leadása).
+  
+**Nem funkcionális követelmények:**
+
+- Az alkalmazásnak gyorsan kell betöltenie, különösen a keresések és a kategorizált listák megjelenítése során.
+- A weboldal reszponzív kialakítású legyen, és jól használható.
+- A felhasználói adatok védelme kiemelten fontos; az adatok titkosítása biztosítva legyen.
+- Az alkalmazás könnyen skálázható legyen, hogy a felhasználók növekvő száma ne befolyásolja a teljesítményt.
+- Az alkalmazás hibamentesen és megbízhatóan működjön hosszú ideig tartó használat során is.
+  
+**Törvényi előírások, szabványok:**
+
+- A programnak meg kell felelnie a **GDPR** adatvédelmi előírásainak, különös tekintettel a felhasználók személyes adatainak kezelésére.
+- Biztosítani kell, hogy a felhasználók ne férjenek hozzá mások személyes adataihoz, kivéve a nyilvános információkat (felhasználónév, értékelések).
+- A rendszernek meg kell felelnie a nemzetközi webes szabványoknak (pl. WCAG 2.1) az akadálymentesség biztosítása érdekében.
+
+---
 ### Funkcionális terv:
 **Rendszerszereplők:**
 - Admin
