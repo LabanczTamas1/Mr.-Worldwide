@@ -493,8 +493,38 @@ Az adatbázisban a következő táblák találhatók:
 ### Adatbázis terv:
 ![adatbázis terv](files/img/databaseDiagram.png)
 ### Implementációs terv:
+A Webes felület főként **HTML**, **CSS**, **PHP**, **Javascript** nyelven fog készülni.
+Ezeket a technológiákat amennyire csak lehet külön fájlokba írva készítjük, és
+úgy fogjuk egymáshoz csatolni a jobb átláthatóság, könnyebb változtathatóság,
+és könnyebb bővítés érdekében. Képes lesz felhasználni a Backend részen futó
+REST szolgáltatás metódusait, ezáltal tud felvinni és lekérdezni adatokat az
+adatbázisból. Az eltelt időt a kliens fogja számolni a feladatoknál, hogy ne
+legyenek eltérések. Legfőképpen PHP-t fogunk használni.
 ### Tesztterv:
+#### Unit teszt:
+Minden lehetséges és fontosabb kisebb részt tesztelni, akár egy form mezőjétől a gombok működéséig, illetve a szélsőséges esetek letesztelése, akár a null, illetve nagy számok tesztjei.
+#### Alfa teszt:
+Itt leteszteljük, hogy mindne böngészőben, illetve milyen verziókban működik a webapp.
+#### Beta teszt:
+A termék reszponzivitásának tesztelése különboző eszközöken és technológiákon.
+#### Tesztelendő funkciók:
+- **Bejelentkezés**
+- **Regisztráció**
+- **Poszt feltöltése**
+- **Poszt módosítása**
+- **Felhasználónév módosítása**
+- **Jelszó módosítása**
+- **Profil törlése**
+- **Poszt értékelése**
+- **Poszt kommentelése**
+- **Posztok szűrése**
+- **Keresési tesztek**
+
 ### Telepítési terv:
+A szoftver webes felületéhez csak egy ajánlott böngésző telepítése
+szükséges (Google Chrome, Firefox, Opera, Safari), külön szoftver
+nem kell hozzá. A webszerverre közvetlenül az internetről
+kapcsolódnak rá a kliensek.
 ### Karbantartási terv:
 
 
