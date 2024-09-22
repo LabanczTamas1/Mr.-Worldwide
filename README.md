@@ -231,7 +231,152 @@ Az igényelt modell célja, hogy egyszerűsítse és központosítsa a turisták
 
 
 ### Képernyő tervek:
+#### Desktop nézetek:
+##### Érkezési oldal
+![Landing page](files/img/Landing%20page.png)
+##### Navigációs menü
+![Landing page](files/img/Navbar.png)
+##### Lenyított navigációs menü
+![Lenyitott oldal](files/img/Lenyitott.png)
+##### Bejelentkezés oldal
+![Bejelentkezés oldal](files/img/Bejelentkezes.png)
+##### Regisztráció oldal
+![Regisztráció oldal](files/img/Regisztracio.png)
+##### Hírfolyam oldal
+![Hírfolyam oldal](files/img/Feed.png)
+##### Kinyított poszt oldal, látogatói nézetben
+![Kinyított poszt oldal, látogatói nézetben](files/img/Kinyitás%20guest%20nézetben.png)
+##### Kinyított poszt oldal, felhasználói nézetben
+![Kinyított poszt oldal, felhasználói nézetben](files/img/Kinyitás.png)
+##### Profil oldal, felhasználói nézetben
+![Profil oldal, felhasználói nézetben](files/img/Profil.png)
+##### Profil oldal, admin nézetben
+![Profil oldal, admin nézetben](files/img/Profil%20admin.png)
+##### Poszt feltöltése oldal
+![Poszt feltöltése oldal](files/img/Feltöltés.png)
+##### Poszt módosítása oldal
+![Poszt módosítása oldal](files/img/Módosítás.png)
+##### Fiók kezelése oldal
+![Fiók kezelése oldal](files/img/Fiók%20kezelése.png)
+#### Mobil nézetek:
+
+##### Érkezési oldal
+![Érkezési oldal](files/img/iPhone%2013%20&%2014%20-%205.png)
+##### Lenyított navigációs menü
+![Lenyitott oldal](files/img/iPhone%2013%20&%2014%20-%201.png)
+##### Bejelentkezés oldal
+![Bejelentkezés oldal](files/img/Bejelentkezes_mobil.png)
+##### Regisztráció oldal
+![Regisztráció oldal](files/img/Regisztracio_mobil.png)
+##### Hírfolyam oldal
+![Hírfolyam oldal](files/img/iPhone%2013%20&%2014%20-%205.png)
+##### Kinyított poszt oldal, látogatói nézetben
+![Kinyított poszt oldal, látogatói nézetben](files/img/iPhone%2013%20&%2014%20-%205.png)
+##### Kinyított poszt oldal, felhasználói nézetben
+![Kinyított poszt oldal, felhasználói nézetben](files/img/iPhone%2013%20&%2014%20-%204.png)
+##### Profil oldal, felhasználói nézetben
+![Profil oldal, felhasználói nézetben](files/img/iPhone%2013%20&%2014%20-%206.png)
+##### Profil oldal, admin nézetben
+![Profil oldal, admin nézetben](files/img/iPhone%2013%20&%2014%20-%2012.png)
+##### Poszt feltöltése oldal
+![Poszt feltöltése oldal](files/img/iPhone%2013%20&%2014%20-%207.png)
+##### Poszt módosítása oldal
+![Poszt módosítása oldal](files/img/iPhone%2013%20&%2014%20-%208.png)
+##### Fiók kezelése oldal
+![Fiók kezelése oldal](files/img/iPhone%2013%20&%2014%20-%209.png)
 ### Forgatókönyv:
+
+#### 1. Érkezési Oldal
+- **Célja**: A látogatók üdvözlése és a weboldal bemutatása.
+- **Fő elemek**:
+    - **Navigációs sáv(Hamburger menü)**
+    - **Hős szekció**:
+        - Üdvözlése a felhasználónak.
+        - A felhasznéló posztjai edit módban.
+        - **Call to Action (CTA)** gombok: "Új poszt".
+
+
+---
+
+#### 2. Profil oldal
+- **Célja**: A felhasználó látja és szerkesztheti a saját posztjait, illetve új posztokat is hozzáadhat.
+- **Fő elemek**:
+    - **Navigációs sáv(Hamburger menü)**: Logó, Hamburger menü, Menüpontok (Poszt (Poszt feltöltése, Poszt módosítása, Poszt törlése), Fiók (Profil, Bejelntkezés, Fiók műveletek, Kijelentkezés)), cégnév, about leíró oldal, Term and policy.
+    - **Hős szekció**:
+        - Nagy, figyelemfelkeltő szöveg.
+        - Posztok
+        - **Call to Action (CTA)** gombok: "Bejelentkezés", "Regisztrálás".
+
+---
+
+#### 3. Bejelentkezés/Regisztráció
+- **Célja**: A látogató (guest) bejelentkezthet vagy regisztrálhat.
+- **Fő elemek**:
+    - **Navigációs sáv(Hamburger menü)**: Logó, Hamburger menü, Menüpontok (Poszt (Poszt feltöltése, Poszt módosítása, Poszt törlése), Fiók (Profil, Bejelntkezés, Fiók műveletek, Kijelentkezés)), cégnév, about leíró oldal, Term and policy.
+    - **Hős szekció**:
+        - Bejelentkezési űrlap/Regisztrációs űrlap
+   - **Lábléc**: Adathasználati irányelvek és a cég neve
+
+---
+
+#### 4. Fiók műveletek
+- **Célja**: A felhasználó itt tud módosítasokat végrhajtani a fiókjával kapcsolatban.
+- **Fő elemek**:
+    - **Navigációs sáv(Hamburger menü)**: Logó, Hamburger menü, Menüpontok (Poszt (Poszt feltöltése, Poszt módosítása, Poszt törlése), Fiók (Profil, Bejelntkezés, Fiók műveletek, Kijelentkezés)), cégnév, about leíró oldal, Term and policy.
+    - **Hős szekció**:
+        - Egy felhasználónév csere űrlap.
+        - Egy jelszó csere űrlap.
+        - Egy fiók törlése gomb.
+
+---
+
+#### 5. Megnyitott Poszt
+- **Célja**: A felhasználó/látogató (guest) itt tudja a képet nagyobb formátumban megnézni, illetve a kommenteket. A felhasználó új kommentet is tud hozzáadni. Illetve mind a felhasználó, mind a látogató (guest) tudja értékelni a posztot.
+- **Fő elemek**:
+    - **Navigációs sáv(Hamburger menü)**: Logó, Hamburger menü, Menüpontok (Poszt (Poszt feltöltése, Poszt módosítása, Poszt törlése), Fiók (Profil, Bejelntkezés, Fiók műveletek, Kijelentkezés)), cégnév, about leíró oldal, Term and policy.
+    - **Hős szekció**:
+        - A kép.
+        - A poszt helye a világban.
+        - Értékelések.
+        - Kommentek és/vagy komment írása.
+
+---
+
+#### 6. Hírfolyam
+- **Célja**: A felhasználó/látogató (guest) láthatja mások posztjai, illetve szűrhet közöttük.
+- **Fő elemek**:
+    - **Navigációs sáv(Hamburger menü)**: Logó, Hamburger menü, Menüpontok (Poszt (Poszt feltöltése, Poszt módosítása, Poszt törlése), Fiók (Profil, Bejelntkezés, Fiók műveletek, Kijelentkezés)), cégnév, about leíró oldal, Term and policy.
+    - **Hős szekció**:
+        - Köszöntő rész
+        - Szűrési sáv.
+        - Posztok
+
+---
+
+#### 7. Poszt feltöltése
+- **Célja**: A felhasználó/admin itt tud új posztot hozzáadni.
+- **Fő elemek**:
+    - **Navigációs sáv(Hamburger menü)**: Logó, Hamburger menü, Menüpontok (Poszt (Poszt feltöltése, Poszt módosítása, Poszt törlése), Fiók (Profil, Bejelntkezés, Fiók műveletek, Kijelentkezés)), cégnév, about leíró oldal, Term and policy.
+    - **Hős szekció**:
+        - Kép beillesztésének helye
+        - Adatok a posztról
+        - Feltöltés gomb.
+   - **Megközelíthetőség**: A felhasználó/admin vagy a menüből érheti el, vagy a profiljából az "Új poszt" gombra kattintva.
+
+---
+
+#### 8. Poszt módosítása
+- **Célja**: A felhasználó/admin itt tud meglévő posztot módosítani.
+- **Fő elemek**:
+    - **Navigációs sáv(Hamburger menü)**: Logó, Hamburger menü, Menüpontok (Poszt (Poszt feltöltése, Poszt módosítása, Poszt törlése), Fiók (Profil, Bejelntkezés, Fiók műveletek, Kijelentkezés)), cégnév, about leíró oldal, Term and policy.
+    - **Hős szekció**:
+        - Kép módosításának helye
+        - Adatok a posztról és annak a megváltozatatása
+        - Módoítás gomb.
+   - **Megközelíthetőség**: A felhasználó/admin csak a profiljából a poszt alatti "Módosítás" gombra kattintva érheti el.
+
+---
+
 ## Rendszerterv:
 ### A rendszer célja:
 A rendszer célja, hogy a kirándulni és utazni vágyó felhasználók számára egy könnyen használható, átlátható weboldalt biztosítson, amely segít összekötni a turistákat világszerte, és hasznos információkat, tapasztalatokat nyújtson számukra. Az alkalmazás lehetőséget ad arra, hogy a felhasználók úticélokat, túrista látványosságokat fedezzenek fel, amelyek kontinensek, országok, majd városok szerint vannak kategorizálva. A felhasználók megoszthatják saját véleményüket és tapasztalataikat az adott helyszínekről, valamint elolvashatják mások visszajelzéseit is. A rendszer kizárólag webes felületen érhető el, minimalista felhasználói felülettel, amely biztosítja a könnyű navigációt és a gyors információelérést. Célunk, hogy a felhasználók számára egy közösségi platformot teremtsünk, ahol megoszthatják élményeiket és javaslataikat más kirándulókkal.
@@ -315,6 +460,8 @@ Az ütemterv folyamatosan frissül a fejlesztés előrehaladtával, és a Scrum 
 - Admin
 - Felhasználó
 - Vendég
+
+---
 
 **Rendszerhasználati esetek és lefutásaik:**
 
@@ -419,8 +566,38 @@ Az adatbázisban a következő táblák találhatók:
 ### Adatbázis terv:
 ![adatbázis terv](files/img/databaseDiagram.png)
 ### Implementációs terv:
+A Webes felület főként **HTML**, **CSS**, **PHP**, **Javascript** nyelven fog készülni.
+Ezeket a technológiákat amennyire csak lehet külön fájlokba írva készítjük, és
+úgy fogjuk egymáshoz csatolni a jobb átláthatóság, könnyebb változtathatóság,
+és könnyebb bővítés érdekében. Képes lesz felhasználni a Backend részen futó
+REST szolgáltatás metódusait, ezáltal tud felvinni és lekérdezni adatokat az
+adatbázisból. Az eltelt időt a kliens fogja számolni a feladatoknál, hogy ne
+legyenek eltérések. Legfőképpen PHP-t fogunk használni.
 ### Tesztterv:
+#### Unit teszt:
+Minden lehetséges és fontosabb kisebb részt tesztelni, akár egy form mezőjétől a gombok működéséig, illetve a szélsőséges esetek letesztelése, akár a null, illetve nagy számok tesztjei.
+#### Alfa teszt:
+Itt leteszteljük, hogy mindne böngészőben, illetve milyen verziókban működik a webapp.
+#### Beta teszt:
+A termék reszponzivitásának tesztelése különboző eszközöken és technológiákon.
+#### Tesztelendő funkciók:
+- **Bejelentkezés**
+- **Regisztráció**
+- **Poszt feltöltése**
+- **Poszt módosítása**
+- **Felhasználónév módosítása**
+- **Jelszó módosítása**
+- **Profil törlése**
+- **Poszt értékelése**
+- **Poszt kommentelése**
+- **Posztok szűrése**
+- **Keresési tesztek**
+
 ### Telepítési terv:
+A szoftver webes felületéhez csak egy ajánlott böngésző telepítése
+szükséges (Google Chrome, Firefox, Opera, Safari), külön szoftver
+nem kell hozzá. A webszerverre közvetlenül az internetről
+kapcsolódnak rá a kliensek.
 ### Karbantartási terv:
 
 
