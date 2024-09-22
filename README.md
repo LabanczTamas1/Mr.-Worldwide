@@ -285,6 +285,98 @@ Az igényelt modell célja, hogy egyszerűsítse és központosítsa a turisták
 ##### Fiók kezelése oldal
 ![Fiók kezelése oldal](files/img/iPhone%2013%20&%2014%20-%209.png)
 ### Forgatókönyv:
+
+#### 1. Érkezési Oldal
+- **Célja**: A látogatók üdvözlése és a weboldal bemutatása.
+- **Fő elemek**:
+    - **Navigációs sáv(Hamburger menü)**
+    - **Hős szekció**:
+        - Üdvözlése a felhasználónak.
+        - A felhasznéló posztjai edit módban.
+        - **Call to Action (CTA)** gombok: "Új poszt".
+
+
+---
+
+#### 2. Profil oldal
+- **Célja**: A felhasználó látja és szerkesztheti a saját posztjait, illetve új posztokat is hozzáadhat.
+- **Fő elemek**:
+    - **Navigációs sáv(Hamburger menü)**: Logó, Hamburger menü, Menüpontok (Poszt (Poszt feltöltése, Poszt módosítása, Poszt törlése), Fiók (Profil, Bejelntkezés, Fiók műveletek, Kijelentkezés)), cégnév, about leíró oldal, Term and policy.
+    - **Hős szekció**:
+        - Nagy, figyelemfelkeltő szöveg.
+        - Posztok
+        - **Call to Action (CTA)** gombok: "Bejelentkezés", "Regisztrálás".
+
+---
+
+#### 3. Bejelentkezés/Regisztráció
+- **Célja**: A látogató (guest) bejelentkezthet vagy regisztrálhat.
+- **Fő elemek**:
+    - **Navigációs sáv(Hamburger menü)**: Logó, Hamburger menü, Menüpontok (Poszt (Poszt feltöltése, Poszt módosítása, Poszt törlése), Fiók (Profil, Bejelntkezés, Fiók műveletek, Kijelentkezés)), cégnév, about leíró oldal, Term and policy.
+    - **Hős szekció**:
+        - Bejelentkezési űrlap/Regisztrációs űrlap
+   - **Lábléc**: Adathasználati irányelvek és a cég neve
+
+---
+
+#### 4. Fiók műveletek
+- **Célja**: A felhasználó itt tud módosítasokat végrhajtani a fiókjával kapcsolatban.
+- **Fő elemek**:
+    - **Navigációs sáv(Hamburger menü)**: Logó, Hamburger menü, Menüpontok (Poszt (Poszt feltöltése, Poszt módosítása, Poszt törlése), Fiók (Profil, Bejelntkezés, Fiók műveletek, Kijelentkezés)), cégnév, about leíró oldal, Term and policy.
+    - **Hős szekció**:
+        - Egy felhasználónév csere űrlap.
+        - Egy jelszó csere űrlap.
+        - Egy fiók törlése gomb.
+
+---
+
+#### 5. Megnyitott Poszt
+- **Célja**: A felhasználó/látogató (guest) itt tudja a képet nagyobb formátumban megnézni, illetve a kommenteket. A felhasználó új kommentet is tud hozzáadni. Illetve mind a felhasználó, mind a látogató (guest) tudja értékelni a posztot.
+- **Fő elemek**:
+    - **Navigációs sáv(Hamburger menü)**: Logó, Hamburger menü, Menüpontok (Poszt (Poszt feltöltése, Poszt módosítása, Poszt törlése), Fiók (Profil, Bejelntkezés, Fiók műveletek, Kijelentkezés)), cégnév, about leíró oldal, Term and policy.
+    - **Hős szekció**:
+        - A kép.
+        - A poszt helye a világban.
+        - Értékelések.
+        - Kommentek és/vagy komment írása.
+
+---
+
+#### 6. Hírfolyam
+- **Célja**: A felhasználó/látogató (guest) láthatja mások posztjai, illetve szűrhet közöttük.
+- **Fő elemek**:
+    - **Navigációs sáv(Hamburger menü)**: Logó, Hamburger menü, Menüpontok (Poszt (Poszt feltöltése, Poszt módosítása, Poszt törlése), Fiók (Profil, Bejelntkezés, Fiók műveletek, Kijelentkezés)), cégnév, about leíró oldal, Term and policy.
+    - **Hős szekció**:
+        - Köszöntő rész
+        - Szűrési sáv.
+        - Posztok
+
+---
+
+#### 7. Poszt feltöltése
+- **Célja**: A felhasználó/admin itt tud új posztot hozzáadni.
+- **Fő elemek**:
+    - **Navigációs sáv(Hamburger menü)**: Logó, Hamburger menü, Menüpontok (Poszt (Poszt feltöltése, Poszt módosítása, Poszt törlése), Fiók (Profil, Bejelntkezés, Fiók műveletek, Kijelentkezés)), cégnév, about leíró oldal, Term and policy.
+    - **Hős szekció**:
+        - Kép beillesztésének helye
+        - Adatok a posztról
+        - Feltöltés gomb.
+   - **Megközelíthetőség**: A felhasználó/admin vagy a menüből érheti el, vagy a profiljából az "Új poszt" gombra kattintva.
+
+---
+
+#### 8. Poszt módosítása
+- **Célja**: A felhasználó/admin itt tud meglévő posztot módosítani.
+- **Fő elemek**:
+    - **Navigációs sáv(Hamburger menü)**: Logó, Hamburger menü, Menüpontok (Poszt (Poszt feltöltése, Poszt módosítása, Poszt törlése), Fiók (Profil, Bejelntkezés, Fiók műveletek, Kijelentkezés)), cégnév, about leíró oldal, Term and policy.
+    - **Hős szekció**:
+        - Kép módosításának helye
+        - Adatok a posztról és annak a megváltozatatása
+        - Módoítás gomb.
+   - **Megközelíthetőség**: A felhasználó/admin csak a profiljából a poszt alatti "Módosítás" gombra kattintva érheti el.
+
+---
+
 ## Rendszerterv:
 ### A rendszer célja:
 ### Projektterv:
@@ -295,6 +387,8 @@ Az igényelt modell célja, hogy egyszerűsítse és központosítsa a turisták
 - Admin
 - Felhasználó
 - Vendég
+
+---
 
 **Rendszerhasználati esetek és lefutásaik:**
 
