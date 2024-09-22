@@ -231,6 +231,59 @@ Az igényelt modell célja, hogy egyszerűsítse és központosítsa a turisták
 
 
 ### Képernyő tervek:
+#### Desktop nézetek:
+##### Érkezési oldal
+![Landing page](files/img/Landing%20page.png)
+##### Navigációs menü
+![Landing page](files/img/Navbar.png)
+##### Lenyított navigációs menü
+![Lenyitott oldal](files/img/Lenyitott.png)
+##### Bejelentkezés oldal
+![Bejelentkezés oldal](files/img/Bejelentkezes.png)
+##### Regisztráció oldal
+![Regisztráció oldal](files/img/Regisztracio.png)
+##### Hírfolyam oldal
+![Hírfolyam oldal](files/img/Feed.png)
+##### Kinyított poszt oldal, látogatói nézetben
+![Kinyított poszt oldal, látogatói nézetben](files/img/Kinyitás%20guest%20nézetben.png)
+##### Kinyított poszt oldal, felhasználói nézetben
+![Kinyított poszt oldal, felhasználói nézetben](files/img/Kinyitás.png)
+##### Profil oldal, felhasználói nézetben
+![Profil oldal, felhasználói nézetben](files/img/Profil.png)
+##### Profil oldal, admin nézetben
+![Profil oldal, admin nézetben](files/img/Profil%20admin.png)
+##### Poszt feltöltése oldal
+![Poszt feltöltése oldal](files/img/Feltöltés.png)
+##### Poszt módosítása oldal
+![Poszt módosítása oldal](files/img/Módosítás.png)
+##### Fiók kezelése oldal
+![Fiók kezelése oldal](files/img/Fiók%20kezelése.png)
+#### Mobil nézetek:
+
+##### Érkezési oldal
+![Érkezési oldal](files/img/iPhone%2013%20&%2014%20-%205.png)
+##### Lenyított navigációs menü
+![Lenyitott oldal](files/img/iPhone%2013%20&%2014%20-%201.png)
+##### Bejelentkezés oldal
+![Bejelentkezés oldal](files/img/Bejelentkezes_mobil.png)
+##### Regisztráció oldal
+![Regisztráció oldal](files/img/Regisztracio_mobil.png)
+##### Hírfolyam oldal
+![Hírfolyam oldal](files/img/iPhone%2013%20&%2014%20-%205.png)
+##### Kinyított poszt oldal, látogatói nézetben
+![Kinyított poszt oldal, látogatói nézetben](files/img/iPhone%2013%20&%2014%20-%205.png)
+##### Kinyított poszt oldal, felhasználói nézetben
+![Kinyított poszt oldal, felhasználói nézetben](files/img/iPhone%2013%20&%2014%20-%204.png)
+##### Profil oldal, felhasználói nézetben
+![Profil oldal, felhasználói nézetben](files/img/iPhone%2013%20&%2014%20-%206.png)
+##### Profil oldal, admin nézetben
+![Profil oldal, admin nézetben](files/img/iPhone%2013%20&%2014%20-%2012.png)
+##### Poszt feltöltése oldal
+![Poszt feltöltése oldal](files/img/iPhone%2013%20&%2014%20-%207.png)
+##### Poszt módosítása oldal
+![Poszt módosítása oldal](files/img/iPhone%2013%20&%2014%20-%208.png)
+##### Fiók kezelése oldal
+![Fiók kezelése oldal](files/img/iPhone%2013%20&%2014%20-%209.png)
 ### Forgatókönyv:
 ## Rendszerterv:
 ### A rendszer célja:
