@@ -4,7 +4,7 @@ use App\Model;
 
 class City extends Model
 {
-    protected $table = "cities";
+    protected string $table = "cities";
     public array $attributes = [
         'id' => 'int',
         'city_name' => 'string',

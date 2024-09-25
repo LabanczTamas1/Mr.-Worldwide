@@ -26,6 +26,7 @@ class Model
         }
         return $modelArray;
     }
+    
     public function create($attributes)
     {
         $this->attributes = $attributes;
@@ -69,11 +70,6 @@ class Model
         }else{
             return false;
         }
-    }
-    public function create($attributes)
-    {
-        $this->attributes = $attributes;
-        return $this;
     }
 
     public function save()
