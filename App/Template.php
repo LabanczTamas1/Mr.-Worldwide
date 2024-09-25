@@ -13,7 +13,7 @@ class Template
 
 
 
-    function __construct($title = 'Sheetstack', $layout = 'empty')
+    function __construct($title = 'Mr.WorldWide', $layout = 'empty')
     {
         $layout = $GLOBALS['BASE_DIR'] . '/views/layouts/' . $layout . '.php';
 
