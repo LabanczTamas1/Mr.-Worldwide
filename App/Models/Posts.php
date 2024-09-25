@@ -2,7 +2,7 @@
 namespace App\Models;
 use App\Model;
 
-class City extends Model
+class Posts extends Model
 {
     protected string  $table = "posts";
     public array $attributes = [
