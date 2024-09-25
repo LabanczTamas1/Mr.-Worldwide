@@ -70,5 +70,44 @@ class Model
             return false;
         }
     }
+    public function create($attributes)
+    {
+        $this->attributes = $attributes;
+        return $this;
+    }
+
+    public function save()
+    {
+        try {
+            $data = $this->attributes;
+            self::$DB->insert($this->table, $data);
+        } catch (\Exception $ex) {
+            echo 'hiba a mentésnél: <br> ' . $ex->getMessage();
+            return false;
+        }
+        return true;
+    }
+    public function delete(){
+        try {
+
+            self::$DB->delete($this->table,$this->id);
+        } catch (\Exception $ex) {
+            echo 'hiba a törlésnél: <br> ' . $ex->getMessage();
+            return false;
+        }
+        return true;
+    }
+
+    public function update()
+    {
+        try {
+            $data = $this->attributes;
+            self::$DB->update($this->table, $data, $this->id);
+        } catch (\Exception $ex) {
+            echo 'hiba a módosításnál: <br> ' . $ex->getMessage();
+            return false;
+        }
+        return true;
+    }
     
 }
