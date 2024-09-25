@@ -29,6 +29,26 @@ class Database
             echo "Hiba: " . $exc->getMessage();
         }
     }
+
+    
+    public function getColumnName($table)
+    {
+        $sql = "SHOW COLUMNS FROM " . $table;
+        $stmt = $this->dbc->prepare($sql);
+        $stmt->execute();
+        $data = $stmt->fetchAll(PDO::FETCH_COLUMN);
+        return $data;
+    }
+    public function getNoKeyColumnName($table)
+    {
+        $column = $this->getColumnName($table);
+        $sql = "SHOW KEYS FROM $table WHERE Key_name = 'PRIMARY';";
+        $stmt = $this->dbc->prepare($sql);
+        $stmt->execute();
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $column = array_diff($column, [$data[0]['Column_name']]);
+        return $column;
+    }
     public function read(string $table)
     {
         $sql = "SELECT * FROM " . $table;
