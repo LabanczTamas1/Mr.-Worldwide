@@ -36,7 +36,7 @@ class RegisterController {
             
             if ($user -> save()) {
                 Tools::FlashMessage("Sikeres regisztráció!", 'success');
-                //header('Location: /userhandle/login');
+                header('Location: /userhandle/login');
             }
         }
     }

@@ -5,6 +5,7 @@ use App\Tools;
 
 class LoginController {
     public function Get_user($email, $password) {
+        global $session;
         $users = new User;
 
         $concrateUser = $users -> getItemBy('email', $email);
@@ -25,5 +26,6 @@ class LoginController {
             $wrongusername = "Nincsen ilyen felhasználó!";
             Tools::FlashMessage($wrongusername, 'danger');
         }
+     
     }
 }

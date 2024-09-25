@@ -1,9 +1,10 @@
 <?php
 require_once __DIR__ . '/../lib/autoload.php';
 use App\Helper;
-use App\Tools;
 
-new App\Template('login','login');
+new App\Template('login','empty');
+
+if (Helper::isAuth()) header('Location: /');
 
 if (isset($_POST["userlogin"])) {
     $LoginController = new App\Controllers\LoginController;
