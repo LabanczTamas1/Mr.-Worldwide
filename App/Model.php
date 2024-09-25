@@ -13,7 +13,7 @@ class Model
 
         self::$DB = new Database;
     }
-    public function createCollection(array $query): array
+    public function createCollection(array $query)
     {
         $modelArray = array();
 
@@ -30,6 +30,45 @@ class Model
     {
         $this->attributes = $attributes;
         return $this;
+    }
+
+    public function all()
+    {
+        $modelArray = array();
+        $query = self::$DB->read($this->table);
+        $modelArray = $this->createCollection($query);
+        return $modelArray;
+    }
+
+    public function getItemById(int $id)
+    {
+        $result = self::$DB->readOne($this->table, $id);
+        if (!isset($result["id"])){
+            $result = $result[0];
+        }
+        return $this->create($result);
+    }
+
+    public function getItemBy(string $column, string $value)
+    {
+        $result = self::$DB->getItemByValue($this->table,$column,$value);
+        if($result){
+            return $this->create($result[0]);
+        }else{
+            return false;
+        }
+    }
+
+    public function getItemsBy(string $column, string $value)
+    {
+        $query = self::$DB->getItemByValue($this->table,$column,$value);
+        $collection = array();
+        $collection = $this->createCollection($query);
+        if($collection){
+            return $collection;
+        }else{
+            return false;
+        }
     }
     
 }
