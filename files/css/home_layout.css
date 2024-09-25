@@ -1,0 +1,33 @@
+.filter-container {
+    margin: 0px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filter-select {
+    padding: 1px;
+    font-size: 1rem;
+    border: 0;
+    width:6rem;
+}
+
+.search-input {
+    padding: 5px;
+    font-size: 1rem;
+    width: 200px;
+}
+
+.continent-container{
+    border: 1px solid black;
+    border-radius: 5%;
+}
+
+.filter-container{
+    border-top:1px solid black;
+    padding-top:5px;
+}
+
+h3{
+    margin: 5px;
+}
