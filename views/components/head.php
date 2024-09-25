@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="/assets/css/footer.css">
 <link rel="stylesheet" href="/assets/css/header.css">
 <link rel="stylesheet" href="/assets/css/profile.css">
-<link rel="stylesheet" href="/assets/css/navbar.css">
+<link rel="stylesheet" href="/files/css/navbar.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
@@ -26,6 +26,7 @@
 <link rel="stylesheet" href="/assets/css/buttons.css">
 <link rel="stylesheet" href="/assets/css/comment.css">
 <script src="/assets/js/main.js"></script>
+<script src="/files/js/sidebar-opener.js"></script>
 <script>
     document.navigateTo = function(url) {
         window.location.href = url;
