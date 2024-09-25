@@ -57,4 +57,88 @@ class Database
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
+    public function insert($table, $data)
+    {
+        $colName = $this->getNoKeyColumnName($table);
+        $sql = "INSERT INTO " . $table . " ( ";
+        foreach ($colName as $col) {
+            if ($col <> end($colName)) {
+                $sql .= $col . ", ";
+            } else {
+                $sql .= $col . " ) ";
+            }
+        }
+        $sql .= "VALUES ( ";
+        foreach ($colName as $col) {
+            if ($col <> end($colName)) {
+                $sql .= "'" . $data["$col"] . "', ";
+            } else {
+                $sql .= "'" . $data["$col"] . "' ) ";
+            }
+        }
+        $stmt = $this->dbc->prepare($sql);
+        $stmt->execute();
+        return true;
+    }
+
+    public function update($table, $data, $id)
+    {
+        $colName = $this->getNoKeyColumnName($table);
+        $sql = "UPDATE " . $table . " SET ";
+        foreach ($colName as $col) {
+
+            if ($col <> end($colName)) {
+                $sql .= $col . " = :" . $col . ", ";
+            } else {
+                $sql .= $col . " = :" . $col . " ";
+            }
+        }
+        $sql .= "WHERE id = :id ";
+        $stmt = $this->dbc->prepare($sql);
+        $stmt->bindParam(':id', $id);
+        foreach ($colName as $col) {
+            $stmt->bindParam(":$col", $data["$col"]);
+        }
+        $stmt->execute();
+
+
+    }
+
+
+    public function delete($table, $id)
+    {
+        $sql = "DELETE FROM " . $table . " WHERE id = " . $id;
+        $stmt = $this->dbc->prepare($sql);
+        if($stmt->execute())return true;
+    }
+
+    public function delete_all($table, $id)
+    {
+        $sql = "DELETE FROM " . $table . " WHERE music_id = " . $id;
+        $stmt = $this->dbc->prepare($sql);
+
+        if($stmt->execute())return true;
+    }
+
+    public function readOne($table, $id)
+    {
+        $sql = "SELECT * FROM " . $table . " WHERE id =" . $id;
+        $stmt = $this->dbc->prepare($sql);
+        $stmt->execute();
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
+    }
+    public function getItemByValue(string $table, string $column, string $value)
+    {
+
+        try {
+            $sql = "SELECT * FROM " .  $table  . " WHERE " . $column . " =  '" . $value . "'";
+            $stmt = $this->dbc->prepare($sql);
+            $stmt->execute();
+            $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            return $data;
+        } catch (PDOException $exc) {
+            echo "Lekérdezési hiba: " . $exc->getTraceAsString();
+        }
+    }
 }
