@@ -42,6 +42,7 @@
                     <li><a class="nav-link" href="../Userhandler/login">Bejelentkezés</a></li>
                     <li><a class="nav-link" href="../Userhandler/login">Fiók műveletek</a></li>
                     <li><a class="nav-link" href="../Userhandler/login">Kijelentkezés</a></li>
+                    <?php include __DIR__ . '/../userhandle/logout.php'; ?>
                 </ul>
             </div>
         </div>
