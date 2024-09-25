@@ -12,8 +12,8 @@
 <body class="helping_quary">
     <header>
         <?php include __DIR__ . '/../components/navbar.php'; ?>
-        <a href="/login.php">Bejelentkezés</a>
-        <a href="/signup.php">Regisztráció</a>
+        <a href="/../userhandle/register.php?action=login">Bejelentkezés</a>
+        <a href="/../userhandle/register.php?action=signup">Regisztráció</a>
         Nyisd ki az elméd, fedezd fel a világot!
     </header>
 
