@@ -10,33 +10,33 @@ class RegisterController {
         $dataarray['type'] = "User";
 
         if(empty($dataarray['username']) || empty($dataarray['email'])) {
-            Tools::FlashMassage("Adjon meg helyes adatokat!", 'danger');
+            Tools::FlashMessage("Adjon meg helyes adatokat!", 'danger');
             return false;
         } else {
             if ($post['passwd1'] == $post['passwd2']) {
-                $dataarray['pass'] = Tools::Crypt($post['passwd1']);
+                $dataarray['password'] = Tools::Crypt($post['passwd1']);
             } else {
-                Tools::FlashMassage("A jelszavak nem egyeznek!", 'danger');
+                Tools::FlashMessage("A jelszavak nem egyeznek!", 'danger');
                 return false;
             }
 
             $userNamespace = new User;
 
             if ($userNamespace -> getItemBy('username', $dataarray['username'])) {
-                Tools::FlashMassage("Már létezik ilyen nevű felhasználó!", 'danger');
+                Tools::FlashMessage("Már létezik ilyen nevű felhasználó!", 'danger');
                 return false;
             }
 
             if ($userNamespace -> getItemBy('email', $dataarray['email'])) {
-                Tools::FlashMassage("Már létezik ilyen email cím!", 'danger');
+                Tools::FlashMessage("Már létezik ilyen email cím!", 'danger');
                 return false;
             }
 
             $user = new User($dataarray);
-
+            
             if ($user -> save()) {
-                Tools::FlashMassage("Sikeres regisztráció!", 'success');
-                header('Location: userhandle/login');
+                Tools::FlashMessage("Sikeres regisztráció!", 'success');
+                //header('Location: /userhandle/login');
             }
         }
     }

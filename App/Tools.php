@@ -10,12 +10,14 @@ class Tools
         ];
         return password_hash($password, PASSWORD_BCRYPT, $options);
     }
-    public static function FlashMassage(string $message, string $type='primary')
+
+    public static function FlashMessage(string $message, string $type='primary')
     {
         if(isset($_SESSION['flash_message']))
             unset($_SESSION['flesh_message']);
         $_SESSION['flash_message'] = ['message' => $message,'type' => $type];
     }
+
     public static function slugify($text, string $divider = '-'): string
     {
         $text = preg_replace('~[^\pL\d]+~u',$divider, $text);

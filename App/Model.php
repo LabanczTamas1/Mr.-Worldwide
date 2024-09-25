@@ -83,6 +83,7 @@ class Model
         }
         return true;
     }
+    
     public function delete(){
         try {
 

@@ -14,7 +14,7 @@ if (isset($_POST["regist"])) {
     <h3>Regisztráció</h3>
     <div>
         <label for="email_value">Email cím: </label>
-        <input type="text" name="email" id="email_value" required>
+        <input type="email" name="email" id="email_value" required>
     </div>
     <div>
         <label for="username_value">Felhasználónév: </label>
