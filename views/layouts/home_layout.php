@@ -12,10 +12,20 @@
 <body class="helping_quary">
     <header>
         <?php include __DIR__ . '/../components/navbar.php'; ?>
+
          <?php if(!App\Helper::isAuth()) :?>
         <a href="/../userhandle/login.php">Bejelentkezés</a>
         <a href="/../userhandle/register.php">Regisztráció</a>
+
         <?php endif?>
+        <?php if (!App\Helper::isAuth()) : ?>
+        <div class="container home-container">
+        </div>
+        <?php else :
+        ?>
+        Bejelentkezve
+            <h4>Üdv, <?= App\Helper::user()->username ?>!</h4>
+        <?php endif; ?>
         Nyisd ki az elméd, fedezd fel a világot!
     </header>
     <?php $this->include('components/flashMessage') ?>
@@ -50,13 +60,6 @@
         <?php include __DIR__ . '/../components/card.php'; ?>
         <?php include __DIR__ . '/../components/card.php'; ?>
     </main>
-
-    <?php if (!App\Helper::isAuth()) : ?>
-        <div class="container home-container">
-        </div>
-    <?php else : ?>
-        <?= $content ?>
-    <?php endif; ?>
 
     <!-- Optional Overlay Element -->
     <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
