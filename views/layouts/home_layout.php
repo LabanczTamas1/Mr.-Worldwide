@@ -54,11 +54,12 @@
         </div>
 
         <!-- Posts Section -->
-       
+        <div class="posts-section">
         <?php include __DIR__ . '/../components/card.php'; ?>
         <?php include __DIR__ . '/../components/card.php'; ?>
         <?php include __DIR__ . '/../components/card.php'; ?>
         <?php include __DIR__ . '/../components/card.php'; ?>
+        </div>
     </main>
 
     <!-- Optional Overlay Element -->

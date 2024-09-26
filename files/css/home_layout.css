@@ -28,6 +28,13 @@
     padding-top:5px;
 }
 
+.posts-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 h3{
     margin: 5px;
 }
+
