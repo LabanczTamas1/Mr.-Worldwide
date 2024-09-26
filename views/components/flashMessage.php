@@ -6,17 +6,17 @@ function flashMessage()
         $message = $_SESSION['flash_message']['message'];
         $type = $_SESSION['flash_message']['type'];
 
-        ?>
+    ?>
         <div class="flash-container container">
-            <div class="alert alert-<?= htmlspecialchars($type) ?> alert-dismissible fade" role="alert">
+            <div class="alert alert-<?=$type ?> alert-dismissible fade" role="alert">
                 <?= htmlspecialchars($message) ?>
             </div>
         </div>
-        <?php
-
+<?php
+    }
         // Unset the flash message after displaying it
         unset($_SESSION['flash_message']);
-    }
+    
 }
 
 flashMessage();
