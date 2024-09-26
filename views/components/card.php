@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-<div class="card">
-    <img src="https://via.placeholder.com/776x439" class="card-img-top" alt="Patagonia Map">
+<div class="card-element">
+    <img src="https://via.placeholder.com/776x439" class="card-img-to" alt="Patagonia Map">
     <div class="card-body">
         <h5 class="card-title"><?= $username = 'Andrew Attie'; ?></h5>
         <small class="text-muted"><i class="fas fa-map-marker-alt"></i> <?= $location = 'Patagonia'; ?></small>

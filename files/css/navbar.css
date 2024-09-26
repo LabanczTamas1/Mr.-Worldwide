@@ -13,20 +13,17 @@
     font-size: 26px;
 }
 
-
 .sidebar-open {
     left: 0;
 }
 
-.middle-segment{
-    padding:20px;
+.middle-segment {
+    padding: 20px;
 }
 
-
-body{
+body {
     margin-top: 0px;
 }
-
 
 .overlay {
     position: fixed;
@@ -43,23 +40,27 @@ body{
     display: block;
 }
 
-.navbar-top{
+.navbar {
+    padding: 50px;
+}
+
+.navbar-top {
     display: flex;
 }
 
-.website-title{
+.website-title {
     font-family: "Kode Mono", sans-serif;
     font-weight: bold;
     font-size: 32px;
 }
 
-.menu-section{
+.menu-section {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 26px !important;
 }
 
-.form-control{
+.form-controller {
     width: 360px;
     height: 56px;
     border-radius: 28px;
@@ -67,49 +68,7 @@ body{
     z-index: 1;
 }
 
-#avSearchForm{
-    display:block;  
-}
-
-
-b {
-    font-weight: 600;
-    display: block; /* To ensure it's a block element */
-    position: relative;
-    padding-top: 0px; /* Adjust padding if needed */
-}
-
-
-
-.sidebar b:first-of-type::before {
-    content: "";
-    display: block;
-    border-top: 1px solid black; /* The black line */
-    width: 400px; /* Adjust the width as needed */
-    height: 0;
-    background-color: transparent;
-    position: relative; /* Change to relative to keep the line positioned correctly */
-    top: -10px; /* Adjust the position above the b element */
-    left: 0;
-}
-
-
-a{
-    text-decoration: none;
-    color:inherit;
-}
-
-li{
-    padding-bottom:20px;
-}
-
-#navSearchForm{
-    border-radius: 28px;
-    width:360px;
-    height: 56px;;
-}
-
-.search-container {
+.search-container-segment {
     position: relative;
     width: 100%;
 }
@@ -134,11 +93,6 @@ li{
     z-index: 2;
 }
 
-.search-container input:focus {
-    outline: none;
-    border-color: #000;
-}
-
 .navbar-bottom {
     position: absolute;
     bottom: 0;
@@ -153,9 +107,28 @@ li{
     font-size: 22px !important;
 }
 
-.link-segment{
+.link-segment {
     display: flex;
     justify-content: space-evenly;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
+li {
+    padding-bottom: 20px;
+}
+
+.sidebar b:first-of-type::before {
+    content: "";
+    display: block;
+    border-top: 1px solid black; /* The black line */
+    width: 400px; /* Adjust the width as needed */
+    height: 0;
+    background-color: transparent;
+    position: relative; /* Change to relative to keep the line positioned correctly */
+    top: -10px; /* Adjust the position above the b element */
+    left: 0;
+}

@@ -12,25 +12,20 @@
 <body class="helping_quary">
     <header>
     <?php $this->include('components/navbar') ?>
+    </header>
+    <?php $this->include('components/flashMessage') ?>
 
-         <?php if(!App\Helper::isAuth()) :?>
-        <a href="/../userhandle/login.php">Bejelentkezés</a>
-        <a href="/../userhandle/register.php">Regisztráció</a>
-
+    <main style="margin-top:100px;">
+    <?php if(!App\Helper::isAuth()) :?>
+        Nyisd ki az elméd, fedezd fel a világot!
         <?php endif?>
         <?php if (!App\Helper::isAuth()) : ?>
         <div class="container home-container">
         </div>
         <?php else :
         ?>
-        Bejelentkezve
             <h4>Üdv, <?= App\Helper::user()->username ?>!</h4>
         <?php endif; ?>
-        Nyisd ki az elméd, fedezd fel a világot!
-    </header>
-    <?php $this->include('components/flashMessage') ?>
-
-    <main>
     <h3>Összes Poszt<h3>
     <div class="filter-container">
             <div class="continent-container">

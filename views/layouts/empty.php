@@ -13,7 +13,7 @@
     <header>
     <?php $this->include('components/navbar') ?>
     </header>
-    <main class="container">
+    <main class="container" style="margin-top: 100px;">
         <?php $this->include('components/flashMessage') ?>
         <?php echo $content ?>
     </main>

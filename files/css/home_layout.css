@@ -2,8 +2,9 @@
     margin: 0px 0;
     display: flex;
     gap: 10px;
-    align-items: center;
+    align-items:center;
 }
+
 
 .filter-select {
     padding: 1px;
@@ -20,7 +21,11 @@
 
 .continent-container{
     border: 1px solid black;
-    border-radius: 5%;
+    border-radius: 5px;
+    height: 32px;
+    display: flex;
+    justify-content: space-evenly;
+    width:13%;
 }
 
 .filter-container{
