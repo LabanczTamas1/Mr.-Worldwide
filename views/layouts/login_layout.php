@@ -24,9 +24,9 @@
 
     ?>
   <main class="container">
+    <?php $this->include('components/flashMessage') ?>
         <?= $content; ?>
     </main>
-    <?php include __DIR__ . '/../components/flashMessage.php'; ?>
 </body>
 
 </html>

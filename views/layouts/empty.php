@@ -14,9 +14,9 @@
         <?php include __DIR__ . '/../components/navbar.php'; ?>
     </header>
     <main class="container">
-        <?= $content; ?>
+        <?php $this->include('components/flashMessage') ?>
+        <?php echo $content ?>
     </main>
-
 </body>
 
 </html>

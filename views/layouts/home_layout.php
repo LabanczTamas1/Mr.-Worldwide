@@ -12,10 +12,13 @@
 <body class="helping_quary">
     <header>
         <?php include __DIR__ . '/../components/navbar.php'; ?>
+         <?php if(!App\Helper::isAuth()) :?>
         <a href="/../userhandle/login.php">Bejelentkezés</a>
         <a href="/../userhandle/register.php">Regisztráció</a>
+        <?php endif?>
         Nyisd ki az elméd, fedezd fel a világot!
     </header>
+    <?php $this->include('components/flashMessage') ?>
 
     <main>
     <h3>Összes Poszt<h3>
@@ -50,7 +53,6 @@
 
     <?php if (!App\Helper::isAuth()) : ?>
         <div class="container home-container">
-            <?php $this->include('components/flashMessage') ?>
         </div>
     <?php else : ?>
         <?= $content ?>

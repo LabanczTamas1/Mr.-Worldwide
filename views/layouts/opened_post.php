@@ -15,6 +15,8 @@
     </header>
 
     <main>
+    <?php $this->include('components/flashMessage') ?>
+
     <img src="https://via.placeholder.com/1296x734" class="card-img-top" alt="Patagonia Map">
     <?php include __DIR__ . '/../components/comment.php'; ?>
     <?php include __DIR__ . '/../components/comment.php'; ?>
