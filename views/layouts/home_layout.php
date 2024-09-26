@@ -56,8 +56,6 @@
         <?= $content ?>
     <?php endif; ?>
 
-    <?php $this->include('components/footer') ?>
-
     <!-- Optional Overlay Element -->
     <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 

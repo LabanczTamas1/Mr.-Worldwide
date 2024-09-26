@@ -1,9 +1,4 @@
 <?php
-// Start the session if it hasn't been started already
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
 function flashMessage()
 {
     // Check if the flash message is set in the session

@@ -6,7 +6,6 @@ use App\Session;
 
 class SessionController
 {
-    public int $expireTime = 7 * 24 * 60 * 60; // 1 hét
 
     private Session $session;
 
@@ -26,8 +25,7 @@ class SessionController
 
     public function create($user_id)
     {
-        $time = time() + $this->expireTime;
-        $_SESSION["user"] = new Session($user_id, $time);
+        $_SESSION["user"] = new Session($user_id, );
 
         return true;
     }
