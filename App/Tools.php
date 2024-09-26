@@ -13,8 +13,8 @@ class Tools
 
     public static function FlashMessage(string $message, string $type='primary')
     {
-        if(isset($_SESSION['flash_message']))
-            unset($_SESSION['flesh_message']);
+        if(isset($_SESSION['flash_messag']))
+            unset($_SESSION['flash_messag']);
         $_SESSION['flash_message'] = ['message' => $message,'type' => $type];
     }
 
