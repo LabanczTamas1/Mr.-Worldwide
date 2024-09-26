@@ -23,8 +23,9 @@
     //}
 
     ?>
-    <?= $content; ?>
-
+  <main class="container">
+        <?= $content; ?>
+    </main>
     <?php include __DIR__ . '/../components/flashMessage.php'; ?>
 </body>
 

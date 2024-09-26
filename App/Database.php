@@ -128,6 +128,7 @@ class Database
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
+
     public function getItemByValue(string $table, string $column, string $value)
     {
 

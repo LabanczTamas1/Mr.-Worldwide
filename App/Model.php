@@ -86,7 +86,7 @@ class Model
     
     public function delete(){
         try {
-
+            
             self::$DB->delete($this->table,$this->id);
         } catch (\Exception $ex) {
             echo 'hiba a törlésnél: <br> ' . $ex->getMessage();
@@ -105,6 +105,10 @@ class Model
             return false;
         }
         return true;
+    }
+    public function __get($attribute)
+    {
+        return $this->attributes[$attribute];
     }
     
 }

@@ -9,7 +9,6 @@ class LoginController {
         $users = new User;
 
         $concrateUser = $users -> getItemBy('email', $email);
-
         if ($concrateUser) {
             $passwordpass = $concrateUser -> password;
 
