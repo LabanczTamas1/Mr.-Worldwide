@@ -10,6 +10,7 @@
 <script src="<?= $this->asset('bootstrap.bundle.min.js'); ?>"></script>
 <link rel="stylesheet" href="<?= $this->asset('css/app.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/card.css'); ?>">
+<link rel="stylesheet" href="<?= $this->asset('css/uploads.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/comment.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/navbar.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/home_layout.css'); ?>">

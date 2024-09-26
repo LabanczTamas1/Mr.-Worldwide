@@ -1,0 +1,96 @@
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 429px;
+    margin: 0 auto;
+    margin-top: 50px;;
+}
+
+.container {
+    max-width: 95% !important;
+}
+
+
+
+
+h6{
+    padding-top:10px;
+    padding-left:30px;
+}
+
+
+h6::after {
+    content: "";
+    display: block;
+    border-top: 1px solid black; /* The black line */
+    width: calc(100%+30px); /* Adjust the width to cover the entire form, minus the margins */
+    height: 0;
+    background-color: transparent;
+    position: relative; /* Change to relative to keep the line positioned correctly */
+    top: 10px; /* Adjust the position above the b element */
+    left: -30px;
+}
+
+
+.upload-container {
+    width: 100%;
+}
+
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    height: 357px;
+    width: 429px;
+    cursor: pointer;
+    text-align: center;
+}
+
+span{
+    font-weight: bold;
+}
+
+#continent{
+    width: 100%;
+    padding:10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.upload-icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea.form-input {
+    height: 80px;
+    resize: none;
+}
+
+.upload-button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.upload-button:hover {
+    background-color: #333;
+}
