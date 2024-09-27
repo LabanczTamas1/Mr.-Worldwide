@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/lib/autoload.php';
+include './views/components/card.php';
 new App\Template('Főoldal', 'home_layout');
 $counteries = new App\Models\Country;
 $continents = new App\Models\Continents;
@@ -45,10 +46,10 @@ $posts = $uploaded_posts->all();
         <?php
         if ($posts){
             foreach ($posts as $post) {
-                $ownsByTheUserBool = $user ? $uploaded_post->ownsByTheUser($user->id) : false;
+                $ownsByTheUserBool = $user ? $post->ownsByTheUser($user->id) : false;
                 $type = $user ? $user->type :false;
                 post_item([
-                    'img' => $post->image,
+                    'img' => '/files/blog_image/'.$post->image,
                     'title' => $post->postname,
                     'description' => $post->description,
                     'city'=> $cities->getItemBy('id',$post->city_id)->city_name,
@@ -56,7 +57,7 @@ $posts = $uploaded_posts->all();
                     'auth' => $ownsByTheUserBool,
                     'like_count' => 15,
                     'dislike_count' => 20,
-                    'comment_coint' =>30,
+                    'comment_count' =>30,
                     'type' => $type
                 ]);
             }
