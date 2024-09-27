@@ -20,4 +20,10 @@ class Posts extends Model
         'user_id' => 'int',
         'post_date' => 'string',
     ];
+    public function ownsByTheUser(int $user_id): bool
+    {
+        
+
+        return $this->user_id == $user_id;
+    }
 }

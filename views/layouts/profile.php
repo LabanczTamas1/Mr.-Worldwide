@@ -30,11 +30,6 @@ new App\Template('login','empty');
             <input type="text" id="city" class="search-input" placeholder="Search...">
         </div>
 
-        <!-- Posts Section -->
-        <div class="posts-section">
-        <?php include __DIR__ . '/../components/my-card.php'; ?>
-        <?php include __DIR__ . '/../components/my-card.php'; ?>
-        <?php include __DIR__ . '/../components/my-card.php'; ?>
-        <?php include __DIR__ . '/../components/my-card.php'; ?>
+
         </div>
     </main>
