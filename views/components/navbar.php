@@ -31,7 +31,7 @@
                 <a href="#" class="navbar-brand" id="hamburger-menu" onclick="toggleSidebar()">
                     <img src="/files/img/ui_icons/icons8-hamburger-menu-50.png" style="width: 48px; height:48px;">
                 </a>
-                <div class="website-title" style="margin: 0 20px;font-size: 32px;">Mr. Worldwide</div>
+                <div class="website-title" style="margin: 0 20px;font-size: 32px;"><a href="/">Mr. Worldwide</a></div>
                 <a class="navbar-brand" href="/views/components/profile.php">
                     <img src="/files/img/ui_icons/icons8-account-26.png" style="width: 48px; height:48px;">
                 </a>

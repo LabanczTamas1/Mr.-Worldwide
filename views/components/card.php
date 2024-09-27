@@ -10,9 +10,14 @@ function post_item(array $post)
             <small class="text-muted">
                 <i class="fas fa-map-marker-alt"></i> <?= $post['city'] ?>
             </small>
-            <p class="card-text"><?= substr($post['description'], 0, 12) ?></p>
+            </div>
+            <p class="card-text"><?= substr($post['description'], 0, 150) ?></p>
             
-            <div class="card-footer d-flex justify-content-between">
+           
+
+            
+
+             <div class="card-footer">
                 <button type="button" class="btn btn-outline-primary">
                     <i class="far fa-thumbs-up"></i> <?= $post['like_count']; ?>
                 </button>
@@ -23,13 +28,12 @@ function post_item(array $post)
                     <i class="far fa-thumbs-down"></i> <?= $post['dislike_count']; ?>
                 </button>
                 
-                <?php if (App\Helper::isAuth()): ?>
-                    <?php if ($post['auth'] || $post['type'] == 'Developer'): ?>
+                                <?php if (App\Helper::isAuth()): ?>
+                    <?php if (($post['auth'] || $post['type'] == 'Developer') && $_SERVER['REQUEST_URI'] == '/views/components/profile'): ?>
                         <a href="<?= $post['slug'] ?>/edit.php">módosítás</a>
                         <a href="<?= $post['slug'] ?>/delete.php">törlés</a>
                     <?php endif ?>
-                <?php endif ?>
-            </div>
+                    <?php endif ?>
         </div> 
     </div>
 <?php

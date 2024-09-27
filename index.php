@@ -8,7 +8,7 @@ $cities = new App\Models\City;
 $uploaded_posts = new App\Models\Posts;
 $posts = $uploaded_posts->all();
 ?>
-
+<div class="filter-section">
 <div class="filter-container">
     <form method="get" class="form">
         <select id="continent" class="filter-select">
@@ -40,6 +40,7 @@ $posts = $uploaded_posts->all();
             <?php endforeach ?>
         </select>
     </form>
+</div>
 </div>
 
 <div class="post-section">

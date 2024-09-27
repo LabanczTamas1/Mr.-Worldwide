@@ -1,5 +1,5 @@
 .sidebar {
-    width: 446px;
+    width: 456px;
     position: fixed;
     left: -2500px; /* Hidden by default */
     top: 0;
@@ -131,4 +131,8 @@ li {
     position: relative; /* Change to relative to keep the line positioned correctly */
     top: -10px; /* Adjust the position above the b element */
     left: 0;
+}
+
+.navbar-top{
+    display: flex;
 }

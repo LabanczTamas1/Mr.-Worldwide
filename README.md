@@ -1,6 +1,6 @@
 # Mr. Wordlwide
 
-## Útikalauzunk - Az Ön útjának kísérője Magyarországon!
+## Útikalauzunk - Az Ön útjának kísérője a világban!
 
 Egy modern és intuitív online platformot fejlesztettünk ki azoknak, akik szeretik felfedezni a világ csodáit. Az Mr. Worldwide alkalmazás segítségével könnyedén tervezheti meg úti céljait világszerte, ezáltal új élmményekre tehet szert.
 
