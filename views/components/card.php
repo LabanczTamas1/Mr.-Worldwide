@@ -3,7 +3,7 @@ function post_item(array $post)
 {
 ?>
     <div class="card-element" onclick="document.navigateTo('<?= $post['slug'] ?>')">
-        <img src="<?= $post['img'] ?>" class="card-img-to" alt="<?= $post['title'] ?>">
+        <img src="<?=$post['img']?>" class="card-img-to" alt="<?= $post['title'] ?>">
         
         <div class="card-body">
             <h5 class="card-title"><?= $post['title'] ?></h5>
