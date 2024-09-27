@@ -7,7 +7,6 @@ $continents = new App\Models\Continents;
 $cities = new App\Models\City;
 $uploaded_posts = new App\Models\Posts;
 $posts = $uploaded_posts->all();
-print_r($_POST)
 ?>
 <div class="filter-section">
 <div class="filter-container">
@@ -26,7 +25,7 @@ print_r($_POST)
         <select id="country" class="filter-select">
             <option value="0">Összes Ország</option>
             <?php foreach ($counteries->all() as $country) : ?>
-                <option value="<?= $country->id ?>" class="dropdown-text"><?= $country->counry_name ?></option>
+                <option value="<?= $country->id ?>" class="dropdown-text"><?= $country->country_name ?></option>
             <?php endforeach ?>
         </select>
     </form>
