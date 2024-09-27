@@ -9,7 +9,7 @@ $uploaded_posts = new App\Models\Posts;
 $posts = $uploaded_posts->all();
 print_r($_POST)
 ?>
-
+<div class="filter-section">
 <div class="filter-container">
     <form method="get" class="form">
         <select id="continent" class="filter-select">
@@ -41,6 +41,7 @@ print_r($_POST)
             <?php endforeach ?>
         </select>
     </form>
+</div>
 </div>
 
 <div class="post-section">

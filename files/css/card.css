@@ -1,11 +1,9 @@
-.card-element{
-    background-color: #f3f3f3;
-    width:776px;
-    height:559px;
-    margin:5rem;
+.card-body{
+    display: flex;
+    justify-content: space-between;
 }
 
-.card-body{
+.card-footer{
     display: flex;
     justify-content: space-between;
 }
