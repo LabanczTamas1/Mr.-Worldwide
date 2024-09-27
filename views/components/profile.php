@@ -4,8 +4,8 @@ new App\Template('login','empty');
 ?>
  <main class="container">
  <h4>Üdv, <?= App\Helper::user()->username ?>!</h4>
-    <a href="<?=__DIR__."user/uploads.php"?>">Új poszt</a>
-    <a href="/../user/modify.php">módosítás</a>
+    <a href="/../posts/create.php"?>Új poszt</a>
+    <a href="/../posts/edit.php">módosítás</a>
 
     
     <h3>Összes Poszt<h3>

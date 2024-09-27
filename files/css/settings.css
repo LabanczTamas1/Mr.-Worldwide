@@ -1,0 +1,33 @@
+.settings-container {
+    display: flex;
+    justify-content: center; /* Centers the forms within the container */
+    align-items: stretch;    /* Ensures both forms are aligned vertically */
+}
+
+.line{
+    border-right:1px solid black;
+    position:relative;
+    top: 1px;
+}
+
+
+.upload-form {
+    padding: 20px; /* Optional, if you want some space inside each form */
+    box-sizing: border-box; /* Keeps the padding inside the element without affecting the size */
+}
+
+#account-delete-button {
+    position: relative;
+    top:500px;
+    margin: auto;
+    width: 10%;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#account-delete-button > a{
+    color:aliceblue;
+}

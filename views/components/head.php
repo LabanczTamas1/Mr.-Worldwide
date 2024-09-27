@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="<?= $this->asset('css/comment.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/navbar.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/show.css'); ?>">
+<link rel="stylesheet" href="<?= $this->asset('css/settings.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/home_layout.css'); ?>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
