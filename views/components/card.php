@@ -20,5 +20,6 @@
                 <i class="far fa-thumbs-down"></i> <?= $shares = 15; ?>
             </button>
         </div>
+        <a href="/../user/modify.php">módosítás</a>
     </div>
 </div>
