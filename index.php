@@ -7,6 +7,7 @@ $continents = new App\Models\Continents;
 $cities = new App\Models\City;
 $uploaded_posts = new App\Models\Posts;
 $posts = $uploaded_posts->all();
+print_r($_POST)
 ?>
 
 <div class="filter-container">

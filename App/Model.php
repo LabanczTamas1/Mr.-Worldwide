@@ -78,6 +78,7 @@ class Model
             $data = $this->attributes;
             self::$DB->insert($this->table, $data);
         } catch (\Exception $ex) {
+            print_r($data);
             echo 'hiba a mentésnél: <br> ' . $ex->getMessage();
             return false;
         }

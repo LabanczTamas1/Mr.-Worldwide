@@ -13,69 +13,85 @@ class PostController {
     private string $city;
     private string $country;
 
-    private function city_upload() {
-        $city = new City();
-        $existing_city = $city->getItemBy('city_name', $this->city);
-        if (!$existing_city) {
-            $city->attributes["city_name"] =$this->city;
-            $city->city_name = $this->city;
-            $city->save();
-            return $city->id;
+    private function uploadCity(): int {
+        $cityModel = new City();
+        $existingCity = $cityModel->getItemBy('city_name', $this->city);
+        
+        if (!$existingCity) {
+            $cityModel->attributes["city_name"] = $this->city;
+            $cityModel->save();
         }
-        return $existing_city->id;
+
+        return $cityModel->getItemBy('city_name', $this->city)->id;
     }
 
-    private function country_upload() {
-        $country = new Country();
-        $existing_country = $country->getItemBy('country_name', $this->country);
-        if (!$existing_country) {
-            $country->attributes["country_name"] = $this->country;
-            $country->save();
-            return $country->id;
+    private function uploadCountry(): int {
+        $countryModel = new Country();
+        $existingCountry = $countryModel->getItemBy('country_name', $this->country);
+        
+        if (!$existingCountry) {
+            $countryModel->attributes["country_name"] = $this->country;
+            $countryModel->save();
         }
-        return $existing_country->id;
+
+        return $countryModel->getItemBy('country_name', $this->country)->id;
     }
 
-    public function InsertPost($post) {
-        global $errors;
-        global $user;
+    public function insertPost(array $post): bool {
+        global $errors, $user;
 
         $this->city = $post["city"];
         $this->country = $post["country"];
 
-        $city_id = $this->city_upload();
-        $country_id = $this->country_upload();
-        $data["postname"] = str_replace("'", "", $post['post_name']);
-        $data["slug"] = Tools::slugify($data['postname'], '-');
-        $data["description"] = str_replace("'", "", $post['description']);
+        $cityId = $this->uploadCity();
+        $countryId = $this->uploadCountry();
+
+        $data = [
+            "postname" => str_replace("'", "", $post['post_name']),
+            "slug" => Tools::slugify($post['post_name'], '-'),
+            "description" => str_replace("'", "", $post['description']),
+            "continent_id" => intval($post["select"]),
+            "city_id" => $cityId,
+            "country_id" => $countryId,
+            "user_id" => $user->id,
+            "post_date" => date('Y-m-d H:i:s'),
+        ];
+
         $img = Image::ImageUpload($_FILES, '/files/blog_image/');
-        $data["continent_id"] = intval($post["select"]);
-        $data["city_id"] = $city_id;
-        $data["country_id"] = $country_id;
-        $data["user_id"] = $user->id;
-        $data["post_date"] = date('Y-m-d H:i:s');
+        if (is_array($img)) {
+            $errors = array_merge($errors, $img);
+        } else {
+            $data['image'] = $img;
+        }
+
+        if ($this->validatePostData($data, $post)) {
+            return $this->savePost($data);
+        }
+        
+        return false;
+    }
+
+    private function validatePostData(array $data, array $post): bool {
         if (empty($data['postname']) || empty($data['description']) || empty($post['country']) || empty($post['city'])) {
             Tools::FlashMessage("Adjon meg helyes adatokat.", 'danger');
             return false;
-        } else {
-            if (is_array($img)) {
-                $errors = array_merge($errors, $img);
-            } else {
-                $data['image'] = $img;
-            }
-
-            if (empty($errors)) {
-                $post_up = new Posts($data);
-                try {
-                    if ($post_up->save()) {
-                        Tools::FlashMessage($data['post_name'] . ' hozzáadva', 'success');
-                        header("Location: /");
-                        exit;
-                    }
-                } catch (\Exception $e) {
-                    Tools::FlashMessage("Hiba történt: " . $e->getMessage(), 'danger');
-                }
-            }
         }
+        return true;
+    }
+
+    private function savePost(array $data): bool {
+        $postEntry = new Posts($data);
+        try {
+            if ($postEntry->save()) {
+                Tools::FlashMessage($data['postname'] . ' hozzáadva', 'success');
+                header("Location: /");
+                exit;
+            }
+        } catch (\Exception $e) {
+            Tools::FlashMessage("Hiba történt: " . $e->getMessage(), 'danger');
+            print_r($data);
+            die();
+        }
+        return false;
     }
 }

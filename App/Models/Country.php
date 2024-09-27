@@ -7,6 +7,6 @@ class Country extends Model
     public string  $table = "countries";
     public array $attributes = [
         'id' => 'int',
-        'counry_name' => 'string',
+        'country_name' => 'string',
     ] ;
 }
