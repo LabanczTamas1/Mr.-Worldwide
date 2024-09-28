@@ -15,13 +15,13 @@ if (isset($_POST["submit"])) {
 <div class="settings-container">
 <form class="upload-form" method="post" enctype="multipart/form-data">
     <h5>Felhasználónév megváltoztatása</h5>
-    <input type="text" name="city" class="form-input" placeholder="Város" required/>
+    <input type="text" name="city" class="form-input" placeholder="Felhasználónév" required/>
     <button type="submit" name="submit" class="upload-button">Megváltoztatása</button>
 </form>
 <div class="line"></div>
 <form class="upload-form" method="post" enctype="multipart/form-data">
     <h5>Jelszó megváltoztatása</h5>
-    <input type="text" name="city" class="form-input" placeholder="Város" required/>
+    <input type="password" name="city" class="form-input" placeholder="Jelszó" required/>
     <button type="submit" name="submit" class="upload-button">Megváltoztatása</button>
 </form>
 </div>

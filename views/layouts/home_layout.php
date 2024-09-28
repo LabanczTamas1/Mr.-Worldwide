@@ -15,18 +15,18 @@
     </header>
     <?php $this->include('components/flashMessage') ?>
 
-    <main style="margin-top:100px;">
+    <main class="container" style="margin-top: 100px;">
+    <!-- Üdvözlő üzenet -->
     <?php if(!App\Helper::isAuth()) :?>
-        Nyisd ki az elméd, fedezd fel a világot!
-        <?php endif?>
-        <?php if (!App\Helper::isAuth()) : ?>
-        <div class="container home-container">
-        </div>
-        <?php else :
-        ?>
-            <h4>Üdv, <?= App\Helper::user()->username ?>!</h4>
-        <?php endif; ?>
-    <h3>Összes Poszt<h3>
+                <h4>Fedezd fel a világot, csatlakozz hozzánk!</h4>
+            <?php else :
+            ?>
+                <h4>Üdv, <?= App\Helper::user()->username ?>!</h4>
+            <?php endif; ?>
+
+    
+    <!-- Posztok szekció címe -->
+    <h3 class="section-title">Összes poszt</h3>
 
             <?php echo $content?>
     </main>
