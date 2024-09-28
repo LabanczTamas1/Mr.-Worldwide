@@ -94,4 +94,50 @@ class PostController {
         }
         return false;
     }
+
+    public function updatePost($data){
+        $post = new Posts();
+        $post = $post->getItemById($data['id']);
+        global $user;
+
+        $post->set('postname',str_replace("'", "", $data['postname']));
+        $post->set('slug', Tools::slugify($data['postname']));
+        $post->set('user_id', $user->id);
+        $post->set('description', str_replace("'", "", $data['description']));
+        $post->set('continet_id', intval($data['continent_id']));
+        $this->city = $data["city"];
+        $this->country = $data["country"];
+
+        $cityId = $this->uploadCity();
+        $countryId = $this->uploadCountry();
+        $post->set('city_id',$cityId);
+        $post->set('country_id',$countryId);
+
+
+        if ($_FILES && $_FILES['img']['name'] != "") {
+
+            $newImage = Image::UpdateImage($post->image, $_FILES, '/files/blog_image');
+
+            if (is_array($newImage)) {
+                $errors = $newImage;
+
+                Tools::FlashMessage('Hiba a feltöltéssel: ' . $errors[0], 'danger');
+                return false;
+            }
+            $post->set('image', $newImage);
+        }else{
+            $post->set( 'image',$post->image);
+        }
+
+
+        try {
+            if ($post->update()) {
+                Tools::FlashMessage($post->postname . ' módosítva', 'success');
+                header("Location: /");
+            }
+        } catch (\Exception $e) {
+            die();
+        }
+
+    }
 }

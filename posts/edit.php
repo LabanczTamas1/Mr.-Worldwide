@@ -1,42 +1,58 @@
 <?php
 require_once __DIR__ . '/../lib/autoload.php';
-new App\Template();
-use App\Controllers\UploadController;
+new App\Template('edit','empty');
+use App\Helper;
+use App\Tools;
+
+
+$countries = new App\Models\Country;
+$cities = new App\Models\City;
+$continents = new App\Models\Continents;
+
+$postNameSpace = new App\Models\Posts;
+$postItem = $postNameSpace->getItemBy('slug',$_GET['slug']);
+
+$city = $cities->getItemBy('id', $postItem->city_id);
+$country = $countries->getItemBy('id', $postItem->country_id);
 
 if (isset($_POST["submit"])) {
-    $upload = new UploadController();
-    $upload->InsertPost($_POST, $_FILES); // Pass both POST and FILES to handle image upload and form data
+    $postUpdate = new App\Controllers\PostController;
+    $postUpdate->updatePost($_POST);
+    header("Location:/");
 }
+
+if(!Helper::isAuth()){
+    Tools::flashMessage('Előbb jelentkezzen be!!', 'danger');
+    header("Location:/");
+}
+
 ?>
 
 <h4>Üdv, <?= App\Helper::user()->username ?>!</h4>
 <h6>Módosítás</h6>
 
 <form class="upload-form" method="post" enctype="multipart/form-data">
-    <div class="upload-container">
-        <label for="image-upload" class="upload-box">
-            <i class="upload-icon"><i class="fa-solid fa-arrow-up-from-bracket"></i></i>
-            <span>Kép feltöltése</span>
-            <input type="file" name="image" id="image-upload" style="display: none;" required/>
-        </label>
-    </div>
-    
-    <select name="continent" id="continent" class="filter-select" required>
-        <option value="" disabled selected hidden>Kontinens</option> <!-- Placeholder option -->
-        <option value="Európa">Európa</option>
-        <option value="Ázsia">Ázsia</option>
-        <option value="Afrika">Afrika</option>
-        <option value="Észak-Amerika">Észak-Amerika</option>
-        <option value="Dél-Amerika">Dél-Amerika</option>
-        <option value="Ausztrália">Ausztrália</option>
-        <option value="Antarktisz">Antarktisz</option>
-    </select>
+<div class="upload-container">
+<label for="image-upload" class="upload-box">
+<i class="upload-icon"><i class="fa-solid fa-arrow-up-from-bracket"></i></i>
+<span>Kép feltöltése</span>
+<input type="file" name="img" id="image-upload"  value="<?=$postItem->image?>" >
+</label>
+</div>
 
-    <input type="text" name="country" class="form-input" placeholder="Ország" required/>
-    
-    <input type="text" name="city" class="form-input" placeholder="Város" required/>
-    
-    <textarea name="description" class="form-input" placeholder="Leírás" required></textarea>
-    
-    <button type="submit" name="submit" class="upload-button">Feltöltés</button>
+<select id="continent" class="filter-select">
+<option value="0">Összes Kontinens</option>
+<?php foreach ($continents->all() as $continent) : ?>
+<option <?php if($postItem->continent_id == $continent->id) echo 'selected'?> value=" <?=$continent->id ?>"" class="dropdown-text"><?= $continent->continent_name ?></option>
+<?php endforeach ?>
+</select>
+<input type="text" name="postname" class="form-input" value="<?=$postItem->postname?>"  required/>
+
+<input type="text" name="country" class="form-input" value="<?=$country->country_name?>"  required/>
+
+<input type="text" name="city" class="form-input"  value="<?=$city->city_name?>" required/>
+
+<textarea name="description" class="form-input"required><?=$postItem->description?></textarea>
+<input type="text" name="id" hidden value="<?=$postItem->id?>">
+<button type="submit" name="submit" class="upload-button">Módosítás</button>
 </form>

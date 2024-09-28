@@ -111,5 +111,14 @@ class Model
     {
         return $this->attributes[$attribute];
     }
+
+    public function set($attribute, $data)
+    {
+        if (!$this->attributes[$attribute]) {
+            array_push($this->attributes, $attribute);
+        }
+        $this->attributes[$attribute] = $data;
+        return true;
+    }
     
 }
