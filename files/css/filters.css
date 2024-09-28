@@ -1,0 +1,50 @@
+.continent-container{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 32px;
+    display: flex;
+    justify-content: space-evenly;
+    width:15%;
+}
+
+#country{
+    width: 100%;
+    padding:10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#city{
+    width: 33%;
+    padding:10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.filter-section {
+    border-top:1px solid black;
+    padding-top:5px;
+    margin: 0px 0;
+    display: flex;
+    gap: 10px;
+    align-items:center;
+}
+
+.filter-container{
+    margin: 10px;
+}
+
+
+.filter-select {
+    padding: 1px;
+    font-size: 1rem;
+    border: 0;
+    width:6rem;
+}
+
+.search-input {
+    padding: 5px;
+    font-size: 1rem;
+    width: 200px;
+}
+

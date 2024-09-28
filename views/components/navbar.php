@@ -11,8 +11,18 @@
             <div class="website-title" style="margin: 0 20px;font-size: 32px;">Mr. Worldwide</div>
             </div>
             <?php if(!App\Helper::isAuth()) :?>
-                <a href="/../userhandle/login.php">Bejelentkezés</a>
-                <a href="/../userhandle/register.php">Regisztráció</a>
+                <div style="display: flex;">
+                    <div class="account-container" style="background-color: white;  border-radius: 100px;">
+                        <a class="navbar-brand" href="/../userhandle/login.php" style="display:flex; justify-content: space-evenly; text-decoration: none; color: black; padding: 5px;">
+                            Bejelentkezés
+                        </a>
+                    </div>
+                    <div class="account-container" style="background-color: black; color:white;  border-radius: 100px;">
+                        <a class="navbar-brand" href="/../userhandle/register.php" style="display:flex; justify-content: space-evenly; text-decoration: none; color: white; padding: 5px;">
+                        Regisztráció
+                        </a>
+                    </div>
+                </div>
             <?php else :
             ?>
             <div class="account-container" style="background-color: black; color:white;  border-radius: 100px;">
