@@ -6,12 +6,14 @@ use App\Session;
 
 class SessionController
 {
-
     private Session $session;
 
     public function __construct()
     {
-        session_start();
+        // Start session if not running, and allow skipping in tests
+        if (php_sapi_name() !== 'cli' && session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
 
         $this->auth();
     }
@@ -25,16 +27,16 @@ class SessionController
 
     public function create($user_id)
     {
-        $_SESSION["user"] = new Session($user_id, );
+        $_SESSION["user"] = new Session($user_id);
 
         return true;
     }
 
-
     public function destroy()
     {
-        if (isset($_SESSION["user"]))
+        if (isset($_SESSION["user"])) {
             unset($_SESSION["user"]);
+        }
 
         return true;
     }
@@ -46,6 +48,6 @@ class SessionController
 
     public function getSession()
     {
-        return $this->session;
+        return $this->session ?? null;
     }
 }

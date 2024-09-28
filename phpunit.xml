@@ -8,4 +8,7 @@
             <directory>tests</directory>
           </testsuite>
       </testsuites>
- </phpunit>
+      <logging>
+        <log type="testdox-html" target="testdox.html"/>
+    </logging>
+</phpunit>
