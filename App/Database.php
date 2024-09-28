@@ -114,7 +114,7 @@ class Database
 
     public function delete_all($table, $id)
     {
-        $sql = "DELETE FROM " . $table . " WHERE music_id = " . $id;
+        $sql = "DELETE FROM " . $table . " WHERE post_id = " . $id;
         $stmt = $this->dbc->prepare($sql);
 
         if($stmt->execute())return true;

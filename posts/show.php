@@ -9,9 +9,23 @@ $post = $posts->getItemBy('slug',$_GET['slug']);
 $author = new App\Models\User;
 $author->getItemBy('id',$post->user_id);
 $post_city = $city->getItemBy('id',$post->city_id);
+$commentNamespace  = new App\Models\Comment;
+$comments = $commentNamespace ->getItemsBy('post_id',$post->id);
 if($user){
     $isLiked = $user->isLiked($post->id);
     $isDisliked = $user->isUnliked($post->id);
+    if (isset($_POST['submit_comment'])) {
+        $user->InsertComment($_POST);
+        $comments = $commentNamespace->getItemsBy('post_id', $post->id);
+    }
+    if (isset($_POST['delete_comment'])) {
+        $user->DeleteComment($_POST['comment_id']);
+        $comments = $commentNamespace->getItemsBy('post_id', $post->id);
+    }
+    if(isset($_POST['updated_comment'])){
+        $user->UpdateComment($_POST['comment_update_text'],$_POST['comment_id']);
+        $comments = $commentNamespace->getItemsBy('post_id', $post->id);
+    }
 }
 ?>
 
@@ -39,19 +53,39 @@ if($user){
                 </button>
             </div> 
             <?php endif?>
-    <div class="comment">
-        <div class="author-name">
-            Andrew Attie
-        </div>
-        <div class="comment-text">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        </div>
-    </div>
+         <?php if ($comments) :?>
+            <?php foreach ($comments as $comment) : ?>
+                <form method="POST">
+                    <input type="text" hidden name="comment_id" value="<?= $comment->id ?>">
+                    <div class="comment">
+                        <div class="author-name">
+                            <?=$user->getItemById(intval($comment->user_id))->username?>
+                        </div>
+                        <div class="comment-text">
+                        <textarea name="comment_update_text" class="comment-text"> <?= $comment->comment ?></textarea>
+                        </div>
+                    </div>
+                    <?php if ($user) : ?>
+                                <?php if ($user->id== $comment->user_id || $usertype == "Developer") : ?>
+                                    <div class="input">
+                                    <?php if (!isset($_POST['update_comment'])) : ?>
+                                        <button type="submit" name="update_comment" class="btn btn-comment-update">Szerkesztés</button>
+                                        <?php else : ?>
+                                            <button type="submit" name="updated_comment" class="btn btn-comment-update">Szerkesztés</button>
+                                        <?php endif; ?>
+                                         <button type="submit" name="delete_comment" class="btn btn-delete">Törlés</button>                                     
+                                    </div>
+                                <?php endif; ?>
+                            <?php endif; ?>
+                </form>
+         <?php endforeach?>
+    <?php endif?>
     <?php if (App\Helper::isAuth()): ?>
-    <form method="get" class="form">
+    <form method="post" class="form">
     <div class="input-wrapper">
+        <input type="text" hidden name="post_id" value="<?= $post->id ?>">
         <input type="text" name="comment" class="form-input" placeholder="Comment..." required/>
-        <button type="submit" class="submit-btn">
+        <button type="submit" class="submit-btn" name="submit_comment">
             <i class="fa fa-paper-plane"></i>
         </button>
     </div>
