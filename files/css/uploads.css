@@ -77,6 +77,8 @@ span{
     border-radius: 28px;
 }
 
+
+
 textarea.form-input {
     height: 80px;
     resize: none;
@@ -96,3 +98,85 @@ textarea.form-input {
 .upload-button:hover {
     background-color: #333;
 }
+
+.upload-container {
+    width: 100%;  /* Adjust as needed */
+    max-width: 400px;  /* Optional */
+    margin: 0 auto;
+    position: relative;
+}
+
+.upload-box {
+    display: block;
+    width: 100%;
+    height: 300px;  /* Adjust height as needed */
+    padding: 20px;
+    border: 2px dashed #ccc;  /* Dashed border for visual feedback */
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    overflow: hidden;  /* Ensure image is contained within the box */
+}
+
+.upload-content {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    vertical-align: middle;
+    z-index: 10;  /* Ensure text and icon stay above the image */
+}
+
+.upload-icon {
+    font-size: 2rem;
+    color: #777;
+}
+
+.upload-content span {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+}
+
+#preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;  /* Ensure image fits without distortion */
+    display: none;  /* Hidden initially */
+    z-index: 5;  /* Display behind the text and icon */
+}
+
+.upload-box input[type="file"] {
+    display: none;  /* Hide the actual file input */
+}
+
+/* Centering the content in .upload-box */
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  /* Centers both horizontally and vertically */
+    background-color: #f4f4f4;
+    border-radius: 15px;
+    height: 357px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    border: 2px dashed #ccc;
+    position: relative;
+    overflow: hidden;
+}
+
+.upload-icon {
+    font-size: 2rem;  /* Adjust size of the icon */
+    color: #777;
+    margin-bottom: 10px;  /* Space between icon and text */
+}
+
+.upload-content {
+    font-weight: bold;
+    color: #555;
+}
+

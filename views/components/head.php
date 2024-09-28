@@ -26,6 +26,7 @@
 <script src="/assets/js/main.js"></script>
 <script src="<?= $this->asset('js/sidebar-opener.js'); ?>"></script>
 <script src="<?= $this->asset('js/main.js'); ?>"></script>
+<script src="<?= $this->asset('js/image-preview.js'); ?>"></script>
 <script>
     document.navigateTo = function(url) {
         window.location.href = url;
