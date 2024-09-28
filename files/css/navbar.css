@@ -68,6 +68,22 @@ body {
     z-index: 1;
 }
 
+.nav-link{
+    color: black;
+}
+
+
+
+.website-title > a{
+    color: black;
+    text-decoration: none;
+}
+
+.website-title > a:hover{
+    color: black;
+    text-decoration: none;
+}
+
 .search-container-segment {
     position: relative;
     width: 100%;
@@ -83,15 +99,9 @@ body {
     z-index: 1;
 }
 
-.search-icon {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-    color: #999;
-    z-index: 2;
-}
+
+
+
 
 .navbar-bottom {
     position: absolute;

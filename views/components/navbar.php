@@ -48,10 +48,12 @@
             </div>
 
             <div class="middle-segment">
-                <form id="navSearchForm" action="/search" method="GET">
-                    <div class="search-container-segment">
-                        <input class="form-controller" type="search" aria-label="Search" placeholder="Keresés..." name="q" value="">
+                <form method="get" class="form">
+                    <div class="input-wrapper">
+                        <input type="text" name="comment" class="form-input" placeholder="Keresés..." required/>
+                        <button type="submit" class="submit-btn">
                         <i class="fa fa-search search-icon"></i>
+                        </button>
                     </div>
                 </form>
             </div>
