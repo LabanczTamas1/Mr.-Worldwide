@@ -142,4 +142,18 @@ class Database
             echo "Lekérdezési hiba: " . $exc->getTraceAsString();
         }
     }
+    public function filter(string $table, array $filters)
+    {
+        $sql = "SELECT * FROM " . $table . " WHERE ";
+
+        foreach ($filters as $key => $value) {
+            $sql .= $key . " = " . $value . " AND ";
+        }
+
+        $sql = substr($sql, 0, strlen($sql) - 4);
+        $stmt = $this->dbc->prepare($sql);
+        $stmt->execute();
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
+    }
 }

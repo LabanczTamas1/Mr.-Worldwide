@@ -16,7 +16,7 @@ function post_item(array $post)
            
 
             
-
+            <?php if (App\Helper::isAuth()): ?>
              <div class="card-footer">
                 <button type="button" class="btn btn-outline-primary">
                     <i class="far fa-thumbs-up"></i> <?= $post['like_count']; ?>
@@ -28,7 +28,6 @@ function post_item(array $post)
                     <i class="far fa-thumbs-down"></i> <?= $post['dislike_count']; ?>
                 </button>
                 
-                <?php if (App\Helper::isAuth()): ?>
                 <?php if (($post['auth'] || $post['type'] == 'Developer') ): ?>
                 <a href="<?= $post['slug'] ?>/edit">módosítás</a>
                 <a href="<?= $post['slug'] ?>/delete">törlés</a>
