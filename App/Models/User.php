@@ -92,4 +92,47 @@ class User extends Model
 
         return $db_result;
     }
+    public function InsertComment(array $post)
+    {
+        $data['comment'] = str_replace("'", "", $post['comment']);
+        $data['post_id'] = $post['post_id'];
+        $data['user_id'] = $this->id;
+        if (empty($data['comment'])) {
+            \App\Tools::FlashMessage("Az érték nem helyes.");
+            return false;
+        } else {
+            try {
+                parent::$DB->insert("comment", $data);
+            } catch (\Exception $e) {
+                \App\Tools::FlashMessage("Valami hiba történt.");
+                echo $e;
+                return false;
+            }
+        }
+    }
+    public function DeleteComment(int $id)
+    {
+        try {
+            parent::$DB->delete("comment", $id);
+        } catch (\Exception $e) {
+            \App\Tools::FlashMessage("Valami hiba történt.");
+            echo $e;
+            return false;
+        }
+    }
+    public function UpdateComment($comment,$id){
+        $commentNameSpace = new Comment;
+        $commentNameSpace->getItemById($id);
+        $commentNameSpace->set('comment',$comment);
+        try {
+            if($commentNameSpace->update()){
+               \APP\Tools::FlashMessage('Sikeresen megváltoztatta hozzászólását.','success');
+            return true;
+            }
+        } catch (\Exception $e) {
+            \App\Tools::FlashMessage("Valami hiba történt.");
+            echo $e;
+            return false;
+        }
+    }   
 }

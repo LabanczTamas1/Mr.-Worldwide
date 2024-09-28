@@ -6,7 +6,7 @@ use App\Model;
 
 class Comment extends Model
 {
-    public string $table = 'comments';
+    public string $table = 'comment';
 
     public array $attributes = [
         'id' => 'int',
