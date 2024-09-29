@@ -14,7 +14,7 @@ class LoginController {
 
             if (password_verify($password, $passwordpass)) {
                 if ($session->create($concrateUser -> id)) {
-                    Tools::FlashMessage('<strong>Sikeres bejelentkezés</strong> Üdv ' . $concrateUser -> fullname, 'success');
+                    Tools::FlashMessage('Sikeres bejelentkezés! Üdv ' . $concrateUser -> fullname, 'success');
                     header('Location: /');
                 };
             } else {

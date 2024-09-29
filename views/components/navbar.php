@@ -48,10 +48,10 @@
             </div>
 
             <div class="middle-segment">
-                <form method="get" class="form">
+                <form method="get" class="form" action="/search" id="navSearchForm">
                     <div class="input-wrapper">
-                        <input type="text" name="comment" class="form-input" placeholder="Keresés..." required/>
-                        <button type="submit" class="submit-btn">
+                        <input type="text" name="q" <?php if (isset($_GET['q'])) echo 'value="' . $_GET['q'] . '"'; ?> class="form-input" placeholder="Keresés..." required/>
+                        <button type="submit" class="submit-btn" onclick="document.getElementById('navSearchForm').submit();" name="search">
                         <i class="fa fa-search search-icon"></i>
                         </button>
                     </div>

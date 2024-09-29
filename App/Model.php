@@ -121,4 +121,39 @@ class Model
         return true;
     }
     
+    public function filter(array $filters)
+    {
+
+        $query = self::$DB->filter($this->table, $filters);
+
+        $collection = $this->createCollection($query);
+
+        if ($collection) {
+            return $collection;
+        } else {
+            return false;
+        }
+    }
+
+    public function search(string $searchTerm, array $attributes)
+    {
+        $result = null;
+
+        $query = self::$DB->read_filter($this->table, $attributes, $searchTerm);
+
+        if ($query)
+            $result = $this->createCollection($query);
+
+        return $result;
+    }
+    public  function count($column,$id){
+        $result = self::$DB->count($this->table,$column,$id);
+        if(empty($result)){
+        return false;
+        }
+        else{
+            return $result;
+        }
+
+    }
 }

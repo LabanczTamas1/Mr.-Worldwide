@@ -156,4 +156,25 @@ class Database
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
+
+    public function read_filter(string $table, array $columns, string $value)
+    {
+        $sql = "SELECT * FROM " . $table . " WHERE ";
+        foreach ($columns as $col) {
+            $sql .= " UPPER(" . $col . ") LIKE UPPER('%" . $value . "%') OR ";
+        }
+        $sql = substr($sql, 0, strlen($sql) - 4);
+        $stmt = $this->dbc->prepare($sql);
+        $stmt->execute();
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
+    }
+    public function count(string $table,$column,$id){
+        $sql = "SELECT COUNT(*) FROM ". $table . " WHERE ".$column ."=".$id;
+        $stmt = $this->dbc->prepare($sql);
+        $stmt->execute();
+        $data = $stmt->fetchColumn();
+        return $data;
+
+    }
 }

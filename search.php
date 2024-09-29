@@ -1,15 +1,17 @@
 <?php
 require_once __DIR__ . '/lib/autoload.php';
 include './views/components/card.php';
-new App\Template('Főoldal', 'home_layout');
+$search_query = isset($_GET['q']) ? $_GET['q'] : '';
+new App\Template('Blog keresés:'.$search_query);
 $countries = new App\Models\Country;
 $continents = new App\Models\Continents;
 $cities = new App\Models\City;
 $posts = new App\Models\Posts;
 $post_collection = null;
-$comments = new App\Models\Comment;
-$like = new App\Models\Recommend;
-$dislike = new App\Models\Unrecommend;
+
+if (!$search_query) {
+    header('Location: /');
+}
 
 $continent_filter = isset($_GET['continents']) ? $_GET['continents'] : 0;
 $country_filter = isset($_GET['countries']) ? $_GET['countries'] : 0;
@@ -31,7 +33,13 @@ if ($filter) {
 
     $post_collection = $posts->filter($filters);
 } else {
-    $post_collection = $posts->all();
+    $post_collection = $posts->search($search_query, ['postname']);
+}
+
+if (!$post_collection) {
+    echo "A " . $searchQuery . " kifejezésre nincs találat.";
+    echo "Ellenőrizze a helyesírást, vagy rövidítse le a lekérdezést.";
+    die();
 }
 ?>
 <form method="get" class="form filter_form">
@@ -67,6 +75,7 @@ if ($filter) {
 <div class="post-section">
         <?php
         if ($post_collection){
+            echo '<h2>'. $search_query .' találatok:</h2>';
             foreach ($post_collection as $post) {
                 $ownsByTheUserBool = $user ? $post->ownsByTheUser($user->id) : false;
                 $type = $user ? $user->type :false;
@@ -77,14 +86,14 @@ if ($filter) {
                     'city'=> $cities->getItemBy('id',$post->city_id)->city_name,
                     'slug' =>'/posts/'. $post->slug,
                     'auth' => $ownsByTheUserBool,
-                    'like_count' => $like->count('post_id', $post->id),
-                    'dislike_count' => $dislike->count('post_id', $post->id),
-                    'comment_count' =>$comments->count('post_id', $post->id),
+                    'like_count' => 15,
+                    'dislike_count' => 20,
+                    'comment_count' =>30,
                     'type' => $type
                 ]);
             }
         }else{
-            echo'<p>Nincs több megjeleníthető Blog.</p>';
+            echo'<p>Legyen ön az első aki feltölt egy blogot</p>';
         }
         ?>
 </div>
