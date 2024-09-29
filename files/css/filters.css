@@ -50,12 +50,23 @@
 
 .filter_form{
     padding: 0px;
-    background-color: white;
-    width: 1000px;
+    background-color: rgb(255, 255, 255);
+    width: 1000px !important;
+    background-color: transparent; /* Match the page background */
+    box-shadow: none; /* Remove shadow */
+    padding: 10px; /* Adjust padding to match surroundings */
+    border: none; /* Remove border if there is one */
+    opacity: 1; /* Ensure full opacity */
 }
 
 .form.filter_form{
     background-color: rgb(255, 255, 255);
-    width: 1000px;
+    width: 2000px !important;
+    max-width: 100%;
+    background-color: transparent; /* Match the page background */
+    box-shadow: none; /* Remove shadow */
+    padding: 10px; /* Adjust padding to match surroundings */
+    border: none; /* Remove border if there is one */
+    opacity: 1; /* Ensure full opacity */
 }
 

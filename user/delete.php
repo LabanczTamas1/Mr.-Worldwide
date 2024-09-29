@@ -1,7 +1,7 @@
 <?php
 use App\Controllers\SessionController;
 Use App\Tools;
-requireonce _DIR . '/../lib/autoload.php';
+require_once __DIR__ . '/../lib/autoload.php';
 if(!\App\Helper::isAuth()){
     header('Location: /');
 }

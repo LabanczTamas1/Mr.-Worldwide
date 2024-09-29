@@ -101,8 +101,8 @@
 
             <div class="menu-section">
                 <b>Fiók</b>
-                <li><a class="nav-link cta" href="/user/uploads">Profil</a></li>
-                <li><a class="nav-link cta" href="/views/components/profile">Profil</a></li>
+                <ul style="list-style-type:none; padding-left: 20px;">
+                    <li><a class="nav-link" href="/user/uploads">Profil</a></li>
                     <li><a class="nav-link" href="/user/settings">Fiók műveletek</a></li>
                     <li><a class="nav-link" href="/userhandle/logout">Kijelentkezés</a></li>
                 </ul>
