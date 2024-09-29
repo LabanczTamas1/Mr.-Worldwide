@@ -1,6 +1,6 @@
 <?php
 Use App\Tools;
-requireonce _DIR . '/../lib/autoload.php';
+require_once __DIR__. '/../lib/autoload.php';
 $postItem = new App\Models\Posts;
 $comments = new App\Models\Comment;
 $recoms = new App\Models\Recommend;
@@ -12,7 +12,7 @@ $comments = $comments->getItemsBy('post_id', $postItem->id);
 $recoms = $recoms->getItemsBy('post_id', $postItem->id);
 $decoms = $decoms->getItemsBy('post_id', $postItem->id);
 try{
-    Image::RemoveUploadedImage('/files/blog_image/'.$postItem->image);
+    \App\Image::RemoveUploadedImage('/files/blog_image/'.$postItem->image);
     if($decoms){
         $db->delete_all('unrecommended_post','post_id', $postItem->id);
     }
