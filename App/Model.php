@@ -134,4 +134,16 @@ class Model
             return false;
         }
     }
+
+    public function search(string $searchTerm, array $attributes)
+    {
+        $result = null;
+
+        $query = self::$DB->read_filter($this->table, $attributes, $searchTerm);
+
+        if ($query)
+            $result = $this->createCollection($query);
+
+        return $result;
+    }
 }
