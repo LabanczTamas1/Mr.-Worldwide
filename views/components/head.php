@@ -16,6 +16,8 @@
 <link rel="stylesheet" href="<?= $this->asset('css/comment.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/filters.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/index.css'); ?>">
+<link rel="stylesheet" href="<?= $this->asset('css/login.css'); ?>">
+<link rel="stylesheet" href="<?= $this->asset('css/register.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/navbar.css'); ?>">
 <link rel="stylesheet" href="<?= $this->asset('css/home_layout.css'); ?>">
 <link rel="preconnect" href="https://fonts.googleapis.com">

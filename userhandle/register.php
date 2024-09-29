@@ -9,7 +9,7 @@ if (isset($_POST["regist"])) {
 }
 ?>
 
-<div>
+<div id="for-middle-container">
 <form method="post" enctype="multipart/form-data">
     <h3>Regisztráció</h3>
     <div>

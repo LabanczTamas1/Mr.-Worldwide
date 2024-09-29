@@ -13,7 +13,7 @@ if (isset($_POST["userlogin"])) {
 }
 ?>
 
-<div>
+<div id="for-middle-container">
 <form method="POST" id="login_form">
         <div>
             <label for="email_value">Email cím: </label>

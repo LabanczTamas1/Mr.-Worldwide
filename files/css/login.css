@@ -1,0 +1,82 @@
+
+
+/* Container to ensure the form stays in the middle */
+#for-middle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+/* Login form container styling */
+#login_form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Styling for labels */
+#login_form label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Styling for input fields */
+#login_form input[type="email"],
+#login_form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Submit button styling */
+#login_form button {
+    background-color: black;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+}
+
+#login_form button:hover {
+    background-color: #333;
+}
+
+/* Register link styling */
+#login_form a {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Heading styling */
+h2 {
+    font-family: 'Courier New', monospace;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    #login_form {
+        padding: 20px;
+        max-width: 90%;
+    }
+}

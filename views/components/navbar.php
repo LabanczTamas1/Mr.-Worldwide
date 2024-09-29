@@ -48,15 +48,16 @@
             </div>
 
             <div class="middle-segment">
-                <form method="get" class="form" action="/search" id="navSearchForm">
-                    <div class="input-wrapper">
-                        <input type="text" name="q" <?php if (isset($_GET['q'])) echo 'value="' . $_GET['q'] . '"'; ?> class="form-input" placeholder="Keresés..." required/>
-                        <button type="submit" class="submit-btn" onclick="document.getElementById('navSearchForm').submit();" name="search">
-                        <i class="fa fa-search search-icon"></i>
-                        </button>
-                    </div>
-                </form>
-            </div>
+    <form method="get" class="form" action="/search" id="navSearchForm">
+        <div class="input-wrapper" id="custom-input-wrapper">
+            <input type="text" class="form-input" id="custom-form-input" name="q" <?php if (isset($_GET['q'])) echo 'value="' . $_GET['q'] . '"'; ?> placeholder="Search..." required />
+            <button type="submit" class="submit-btn-nav" id="custom-submit-btn-nav">
+                <i class="fa fa-search search-icon" id="custom-search-icon"></i>
+            </button>
+        </div>
+    </form>
+</div>
+
 
             <?php if(!App\Helper::isAuth()) :?>
             <div class="menu-section">

@@ -146,3 +146,70 @@ li {
 .navbar-top{
     display: flex;
 }
+
+/* Wrapper for the input and button */
+#custom-input-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 50px; /* Rounded edges */
+    padding: 0 10px; /* Reduced padding for thinner input */
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 300px; /* Set a fixed width */
+    height: 40px; /* Reduced height for thinner appearance */
+    position: relative;
+}
+
+/* Input field styling */
+#custom-form-input.form-input {
+    border: none;
+    outline: none;
+    padding: 0 0px;
+    margin: 0px;
+    margin-right: 150px;
+    font-size: 14px;
+    flex: 1;
+    border-radius: 50px;
+    height: 100%; /* Ensures input height matches the wrapper */
+    font-family: 'Arial', sans-serif;
+    
+}
+
+/* Remove default input field appearance on focus */
+#custom-form-input.form-input:focus {
+    outline: none;
+}
+
+/* Button containing the search icon */
+#custom-submit-btn-nav.submit-btn-nav {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 90px; /* Align the icon to the right */
+    padding: 0px;
+}
+
+/* Search icon */
+#custom-search-icon.search-icon {
+    font-size: 16px;
+    color: #777; /* Light gray for the icon */
+}
+
+/* Change icon color on hover */
+#custom-submit-btn-nav.submit-btn-nav:hover #custom-search-icon.search-icon {
+    color: #333; /* Darken the icon on hover */
+}
+
+#navSearchForm{
+    padding: 0px;
+    margin: 0px;
+    background-color: #ffffff;
+    width: max-content;
+    border-radius: 50px;
+}
