@@ -134,5 +134,48 @@ class User extends Model
             echo $e;
             return false;
         }
-    }   
+    }
+    public function UpdateUserPassword($post)
+    {
+        if ($post) {
+            $data['password'] =  \App\Tools::Crypt($post['password']);
+            $this->set('password', $data['password']);
+            try {
+                if ($this->update()) {
+                    $destroy = new SessionController;
+                    $destroy->destroy();
+                    header("Location:/");
+                    \App\Tools::FlashMessage('Sikeresen megváltoztatta jelszavát.', 'success');
+                }
+            } catch (\Exception $e) {
+                \App\Tools::FlashMessage("Valami hiba történt.");
+                echo $e;
+                return false;
+            }
+        } else {
+            \App\Tools::FlashMessage('Hiba.', 'danger');
+            return false;
+        }
+    }
+    public function UpdateProfileData($post)
+    {
+        if ($post) {
+            $this->set('username', $post['username']);
+            try {
+                if ($this->update()) {
+                    $destroy = new SessionController;
+                    $destroy->destroy();
+                    header("Location:/");
+                    \App\Tools::FlashMessage('Sikeresen megváltoztatta jelszavát.', 'success');
+                }
+            } catch (\Exception $e) {
+                \App\Tools::FlashMessage("Valami hiba történt.");
+                echo $e;
+                return false;
+            }
+        }else {
+            \App\Tools::FlashMessage('Hiba.', 'danger');
+            return false;
+        }
+    }
 }

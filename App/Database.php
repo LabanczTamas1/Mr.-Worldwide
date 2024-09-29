@@ -112,9 +112,9 @@ class Database
         if($stmt->execute())return true;
     }
 
-    public function delete_all($table, $id)
+    public function delete_all($table,$column, $id)
     {
-        $sql = "DELETE FROM " . $table . " WHERE post_id = " . $id;
+        $sql = "DELETE FROM " . $table . " WHERE "."$column"."= " . $id;
         $stmt = $this->dbc->prepare($sql);
 
         if($stmt->execute())return true;

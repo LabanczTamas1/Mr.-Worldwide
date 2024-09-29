@@ -14,9 +14,9 @@ class Comment extends Model
         'user_id' => 'int',
         'post_id' => 'int'
     ];
-    public function delete_all ($post_id){
-    
-        parent::$DB->delete_all($this->table,$post_id);
+    public function delete_all ($column,$post_id){
+
+        parent::$DB->delete_all($this->table,$column,$post_id);
     }
 
 }
