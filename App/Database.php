@@ -169,4 +169,12 @@ class Database
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $data;
     }
+    public function count(string $table,$column,$id){
+        $sql = "SELECT COUNT(*) FROM ". $table . " WHERE ".$column ."=".$id;
+        $stmt = $this->dbc->prepare($sql);
+        $stmt->execute();
+        $data = $stmt->fetchColumn();
+        return $data;
+
+    }
 }

@@ -7,6 +7,9 @@ $continents = new App\Models\Continents;
 $cities = new App\Models\City;
 $posts = new App\Models\Posts;
 $post_collection = null;
+$comments = new App\Models\Comment;
+$like = new App\Models\Recommend;
+$dislike = new App\Models\Unrecommend;
 
 $continent_filter = isset($_GET['continents']) ? $_GET['continents'] : 0;
 $country_filter = isset($_GET['countries']) ? $_GET['countries'] : 0;
@@ -74,9 +77,9 @@ if ($filter) {
                     'city'=> $cities->getItemBy('id',$post->city_id)->city_name,
                     'slug' =>'/posts/'. $post->slug,
                     'auth' => $ownsByTheUserBool,
-                    'like_count' => 15,
-                    'dislike_count' => 20,
-                    'comment_count' =>30,
+                    'like_count' => $like->count('post_id', $post->id),
+                    'dislike_count' => $dislike->count('post_id', $post->id),
+                    'comment_count' =>$comments->count('post_id', $post->id),
                     'type' => $type
                 ]);
             }

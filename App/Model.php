@@ -146,4 +146,14 @@ class Model
 
         return $result;
     }
+    public  function count($column,$id){
+        $result = self::$DB->count($this->table,$column,$id);
+        if(empty($result)){
+        return false;
+        }
+        else{
+            return $result;
+        }
+
+    }
 }
